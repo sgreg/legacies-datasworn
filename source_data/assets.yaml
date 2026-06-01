@@ -1,0 +1,117 @@
+_id: legacies
+datasworn_version: "0.1.0"
+type: expansion
+ruleset: classic
+<<: &Source
+  title: 'Ironsworn: Legacies - Playtest'
+  authors:
+    - name: Shawn Tomkin
+  license: null
+  url: https://ironswornrpg.com
+  date: 2026-05-31
+assets:
+  impacts:
+    type: asset_collection
+    _source:
+      <<: *Source
+    name: Character impacts
+    contents:
+      health:
+        name: Health
+        type: asset
+        category: Impacts
+        _source:
+          <<: *Source
+        abilities: []
+        controls:
+          locked:
+            max: 4
+            value: 0
+            field_type: condition_meter
+            label: Locked
+          minor:
+            max: 4
+            value: 0
+            field_type: condition_meter
+            label: Harmed
+          severe:
+            max: 2
+            value: 0
+            field_type: condition_meter
+            label: Wounded
+          binding:
+            field_type: checkbox
+            is_impact: true
+            label: Afflicted
+          lasting:
+            field_type: checkbox
+            is_impact: true
+            label: Scarred
+          ruinous:
+            field_type: checkbox
+            label: Dying
+      spirit:
+        name: Spirit
+        type: asset
+        category: Impacts
+        _source:
+          <<: *Source
+        abilities: []
+        controls:
+          locked:
+            max: 4
+            value: 0
+            field_type: condition_meter
+            label: Locked
+          minor:
+            max: 4
+            value: 0
+            field_type: condition_meter
+            label: Stressed
+          severe:
+            max: 2
+            value: 0
+            field_type: condition_meter
+            label: Shaken
+          binding:
+            field_type: checkbox
+            is_impact: true
+            label: Consumed
+          lasting:
+            field_type: checkbox
+            is_impact: true
+            label: Haunted
+          ruinous:
+            field_type: checkbox
+            label: Desolate
+      supply:
+        name: Supply
+        type: asset
+        category: Impacts
+        _source:
+          <<: *Source
+        abilities: []
+        controls:
+          locked:
+            max: 4
+            value: 0
+            field_type: condition_meter
+            label: Locked
+          minor:
+            max: 4
+            value: 0
+            field_type: condition_meter
+            label: Rationed
+          severe:
+            max: 2
+            value: 0
+            field_type: condition_meter
+            label: Unprepared
+          binding:
+            field_type: checkbox
+            is_impact: true
+            label: Burdened
+          lasting:
+            field_type: checkbox
+            is_impact: true
+            label: Cursed

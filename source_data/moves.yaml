@@ -1,0 +1,341 @@
+_id: legacies
+datasworn_version: "0.1.0"
+type: expansion
+ruleset: classic
+<<: &Source
+  title: 'Ironsworn: Legacies - Playtest'
+  authors:
+      - name: Shawn Tomkin
+  license: null
+  url: https://ironswornrpg.com
+  date: 2026-05-31
+moves:
+  action:
+    name: Action Moves
+    type: move_category
+    _source:
+      <<: *Source
+    summary: |-
+      Take Action
+    contents:
+      take_action:
+        name: Take Action
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When you attempt something risky and uncertain...
+          conditions:
+            - text: With speed, agility, or precision
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: edge
+            - text: With charm, fellowship, or resolve
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: heart
+            - text: With aggression, hardiness, or might
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: iron
+            - text: With cunning, deception, or stealth
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: shadow
+            - text: With expertise, insight, or observation
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: wits
+        _source:
+          <<: *Source
+        text: |-
+          When __you attempt something risky and uncertain__, envision:
+            * Intent: The success and advantages you hope to gain
+            * Risk: The failure and misfortunes you might suffer
+            * Method: The approach you use (choose below)
+              * Edge: Acting with agility, precision, or speed
+              * Heart: Acting with charm, fellowship, or resolve
+              * Iron: Acting with aggression, hardiness, or might
+              * Shadow: Acting with cunning, deception, or stealth
+              * Wits: Acting with expertise, insight, or observation
+
+          On a __strong hit__, it's a complete success.
+            * Take +1 advantage.
+            * If position is favored, take +1 advantage.
+            * If you tempted fate, take +1 advantage.
+            * Gain position.
+
+          On a __weak hit__, it's a costly success.
+            * Take +1 advantage and +1 misfortune.
+            * If position is favored, take +1 advantage.
+            * If position is desperate, take +1 misfortune.
+            * If you tempted fate, take +1 advantage and +1 misfortune, and lose position.
+
+          On a __miss__, it's an undone success or failure.
+            * Take +1 misfortune
+            * If position is desperate, take +1 misfortune.
+            * If you tempted fate, take +1 misfortune.
+            * Lose position.
+        outcomes:
+          strong_hit:
+            text: |-
+              On a __strong hit__, it's a complete success.
+                * Take +1 advantage.
+                * If position is favored, take +1 advantage.
+                * If you tempted fate, take +1 advantage.
+                * Gain position.
+          weak_hit:
+            text: |-
+              On a __weak hit__, it's a costly success.
+                * Take +1 advantage and +1 misfortune.
+                * If position is favored, take +1 advantage.
+                * If position is desperate, take +1 misfortune.
+                * If you tempted fate, take +1 advantage and +1 misfortune, and lose position.
+          miss:
+            text: |-
+              On a __miss__, it's an undone success or failure.
+                * Take +1 misfortune
+                * If position is desperate, take +1 misfortune.
+                * If you tempted fate, take +1 misfortune.
+                * Lose position.
+  quest:
+    name: Quest Moves
+    type: move_category
+    _source:
+      <<: *Source
+    summary: |-
+      Undertake a Quest
+    contents:
+      undertake_a_quest:
+        name: Undertake a Quest
+        type: move
+        roll_type: no_roll
+        trigger:
+          text: When you commit to defeat a menace, undo a wrong, answer a call to action, or pursue an ambition...
+        _source:
+          <<: *Source
+        text: |-
+          When __you commit to defeat a menace, undo a wrong, answer a call to action, or pursue an ambition__, give the quest a name and progress track. If unsure of the rank, make it formidable.
+
+          If you swear an iron vow to see the quest done, mark this as a __sworn quest__.
+
+          Move forward on the quest by completing crucial challenges, gaining vital support, and other important achievements. When you do, mark progress per the quest rank.
+      resolve_the_quest:
+        name: Resolve the Quest
+        type: move
+        roll_type: progress_roll
+        tracks:
+          category: Quest
+        trigger:
+          text: When you reach what you believe is the end of the quest...
+          conditions:
+            - roll_options:
+                - using: progress_track
+        _source:
+          <<: *Source
+        text: |-
+          When __you reach what you believe is the end of the quest__, test your progress score against the challenge dice. If you lose or abandon the quest, take a miss without rolling.
+
+          On a __strong hit__, the quest is complete. Earn boons per the quest reward. If it was a sworn quest, mark legacy per the vow stakes.
+
+          On a __weak hit__, the quest is complete, but with an unexpected twist, concession, or new obligation. Earn boons per the quest reward, but one rank lower. If it was a sworn quest, mark legacy per the vow stakes, but one rank lower.
+
+          On a __miss__, the quest fails. Envision the consequences of this dramatic turn of events. If you [Undertake a Quest](datasworn:move:legacies/quest/undertake_a_quest) (of equal or greater rank) to set things right, earn 1 boon. If it was a sworn quest, clear legacy per the vow stakes.
+
+          Quest and Objective Ranks
+
+          Rank | Progress | Rewards | Stakes
+          ---- | :---- | ----: | ----:
+          Troublesome | 3 boxes | 2 boons | 1 legacy
+          Dangerous | 2 boxes | 3 boons | 2 legacy
+          Formidable | 1 box | 4 boons | 3 legacy
+          Extreme | 2 ticks | 5 boons | 4 legacy
+          Epic | 1 tick | 10 boons | 5 legacy
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, the quest is complete. Earn boons per the quest reward. If it was a sworn quest, mark legacy per the vow stakes.
+          weak_hit:
+            text: On a __weak hit__, the quest is complete, but with an unexpected twist, concession, or new obligation. Earn boons per the quest reward, but one rank lower. If it was a sworn quest, mark legacy per the vow stakes, but one rank lower.
+          miss:
+            text: On a __miss__, the quest fails. Envision the consequences of this dramatic turn of events. If you [Undertake a Quest](datasworn:move:legacies/quest/undertake_a_quest) (of equal or greater rank) to set things right, earn 1 boon. If it was a sworn quest, clear legacy per the vow stakes.
+  challenge:
+    name: Challenge Moves
+    type: move_category
+    _source:
+      <<: *Source
+    summary: |-
+      Take on a Challenge
+    contents:
+      take_on_a_challenge:
+        name: Take on a Challenge
+        type: move
+        roll_type: no_roll
+        trigger:
+          text: When you face a lengthy effort, perilous encounter, or complex task...
+        _source:
+          <<: *Source
+        text: |-
+          When __you face a lengthy effort, perilous encounter, or complex task__, name one or more objectives and give each a progress track. If unsure of the rank, make them formidable.
+
+          [Take Action](datasworn:move:legacies/action/take_action) to move toward an objective. On a hit, Gain Advantage, choose the _mark progress_ effect, and mark progress per the objective rank. Some assets may also prompt you to mark progress for specific challenge objectives.
+      resolve_an_objective:
+        name: Resolve an Objective
+        type: move
+        roll_type: progress_roll
+        tracks:
+          category: Challenge
+        trigger:
+          text: When you seize an objective...
+          conditions:
+            - roll_options:
+                - using: progress_track
+        _source:
+          <<: *Source
+        text: |-
+          When __you seize an objective__, test your progress score against the challenge dice. If you prematurely lose or abandon an objective, remove it from play without rolling.
+
+          On a __strong hit__, the objective is achieved.
+            * Take +1 advantage.
+            * If position is favored, take +1 advantage.
+            * Gain position
+
+          On a __weak hit__, the objective is achieved at a cost.
+            * Take +1 misfortune.
+            * If position is pressured, take +1 misfortune.
+            * If position is desperate, take +2 misfortune.
+
+          On a __miss__, the objective fails.
+            * Take +2 misfortune.
+            * If position is pressured, take +1 misfortune.
+            * If position is desperate, take +2 misfortune.
+            * Lose position.
+        outcomes:
+          strong_hit:
+            text: |-
+              On a __strong hit__, the objective is achieved.
+                * Take +1 advantage.
+                * If position is favored, take +1 advantage.
+                * Gain position
+          weak_hit:
+            text: |-
+              On a __weak hit__, the objective is achieved at a cost.
+                * Take +1 misfortune.
+                * If position is pressured, take +1 misfortune.
+                * If position is desperate, take +2 misfortune.
+          miss:
+            text: |-
+              On a __miss__, the objective fails.
+                * Take +2 misfortune.
+                * If position is pressured, take +1 misfortune.
+                * If position is desperate, take +2 misfortune.
+                * Lose position.
+      resolve_a_challenge:
+        name: Resolve a Challenge
+        type: move
+        roll_type: no_roll
+        trigger:
+          text: When all objectives are achieved, failed, lost, or abandoned...
+        _source:
+          <<: *Source
+        text: |-
+          When all objectives are achieved, failed, lost, or abandoned, consider the overall result. Earn boons for your effort and outcome as shown below. If unsure, earn 2 boons total.
+
+          Overall effort:
+            * Harrowing effort: 2 boons
+            * Demanding effort: 1 boon
+            * Minor effort: No reward
+
+          Overall outcome:
+            * Decisive success: 2 boons
+            * Limited success: 1 boon
+            * Complete failure: No reward
+  legacy:
+    name: Legacy Moves
+    type: move_category
+    _source:
+      <<: *Source
+    summary: |-
+      Legacy Movies
+    contents:
+      test_your_legacy:
+        name: Test Your Legacy
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When you Pass Time or encounter a lull in your adventures...
+          conditions:
+            - text: With expertise, insight, or observation
+              method: player_choice
+              roll_options:
+                - using: condition_meter
+                  condition_meter: legacy_tier
+        _source:
+          <<: *Source
+        text: |-
+          When __you Pass Time or encounter a lull in your adventures__, test your legacy against the uncertainties of a perilous world.
+
+          On a __strong hit__, you gain insight into an existing quest or danger; envision what you learn. On a __strong hit with a match__, help arrives from a surprising source; earn boons equal to your tier (1 boon if tier 0).
+
+          On a __weak hit__, your legacy offers some measure of control against potential threats. Choose a threat on the table below (instead of rolling).
+
+          On a __miss__, your legacy is lacking, falters, or provokes trouble. Roll a single D10, add your tier, and identify a threat using the table below. On a __miss with a match__, as you reveal a threat, roll twice and take the highest result.
+
+          Tier + d10 | Threat Details
+          ---- | ----
+          1-5 | **Local Trouble:** A small-scale problem, conflict, or dilemma draws your attention.
+          6 | **Confrontation:** A rival, foe, or other danger targets you.
+          7 | **Obligation:** An individual, community, or faction asks for help or makes a demand. Answer the call or clear legacy.
+          8-9 | **Deadline:** A threat grows or an adversary prepares to act. Add a four-segment world timer. Once fully marked, trigger a dilemma (below).
+          10–11 | **Dilemma:** An important location, individual, community, or faction faces a critical situation. Resolve the issue before you next Pass Time; if you don’t, a tragedy occurs (below).
+          12+ | **Tragedy**: An important location, individual, community, or faction suffers a calamity or forsakes you. Clear legacy. If the target of the tragedy is an advancement, it is lost; clear another legacy.
+
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you gain insight into an existing quest or danger; envision what you learn. On a __strong hit with a match__, help arrives from a surprising source; earn boons equal to your tier (1 boon if tier 0).
+          weak_hit:
+            text: On a __weak hit__, your legacy offers some measure of control against potential threats. Choose a threat on the table below (instead of rolling).
+          miss:
+            text: On a __miss__, your legacy is lacking, falters, or provokes trouble. Roll a single D10, add your tier, and identify a threat using the table below. On a __miss with a match__, as you reveal a threat, roll twice and take the highest result.
+
+      end_your_legacy:
+        name: End Your Legacy
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When you succumb to death or desolation, fade from the world, or retire from your life as an adventurer...
+          conditions:
+            - text: With expertise, insight, or observation
+              method: player_choice
+              roll_options:
+                - using: condition_meter
+                  condition_meter: legacy_tier
+        _source:
+          <<: *Source
+        text: |-
+          When __you succumb to death or desolation, fade from the world, or retire from your life as an adventurer__, test the strength of your legacy to see what endures.
+
+          On a __strong hit__, your legacy perseveres. Pass on a legacy using the options below (●● per tier). On a __strong hit with a match__, your exploits or sacrifice become legend, inspiring those who follow. Gain a tier at the start of a new campaign.
+
+          On a __weak hit__, your legacy lingers. Pass on a legacy using the options below (● per tier).
+
+          On a __miss__, your legacy fades. On a __miss with a match__, a wholly unexpected threat or calamity erases your legacy.
+
+          Enduring Legacies | Costs
+          ---- | ----
+          **Follow in their footsteps:** Take an asset held by the previous character, including any marked abilities, as one of the three starting assets for a new character | ●
+          **Accept an inheritance**: Gain a resource with up to three marked qualities at no cost. | ●
+          **Share a connection:** Retain a bond advancement. | ●
+          **Maintain a refuge:** Retain a haven advancement and all passage advancements connected to that location. | ●●
+          **Build on their legacy:** Gain a tier at the beginning of a new campaign (max starting tier is 2). | ●●●
+
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, your legacy perseveres. Pass on a legacy using the options below (●● per tier). On a __strong hit with a match__, your exploits or sacrifice become legend, inspiring those who follow. Gain a tier at the start of a new campaign.
+          weak_hit:
+            text: On a __weak hit__, your legacy lingers. Pass on a legacy using the options below (● per tier).
+          miss:
+            text: On a __miss__, your legacy fades. On a __miss with a match__, a wholly unexpected threat or calamity erases your legacy.

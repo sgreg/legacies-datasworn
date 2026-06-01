@@ -1,0 +1,32 @@
+_id: legacies
+datasworn_version: "0.1.0"
+type: expansion
+ruleset: classic
+rules:
+  condition_meters:
+    boons:
+      label: Boons
+      max: 100
+      value: 0
+      description: |-
+        Boons
+    legacy_segments:
+      label: Legacy segments
+      max: 12
+      min: -12
+      value: 0
+      description: |-
+        Legacy segments
+    legacy_tier:
+      label: Tier
+      max: 6
+      value: 0
+      description: |-
+        Legacy tiers
+    position:
+      label: Position
+      max: 1
+      min: -1
+      value: 1
+      description: |-
+        Positions, +1 favored, 0 pressured, -1 desperate

@@ -6,7 +6,7 @@ rules:
   condition_meters:
     boons:
       label: Boons
-      max: 100
+      max: 99
       value: 0
       description: |-
         Boons
@@ -19,7 +19,7 @@ rules:
         Legacy segments
     legacy_tier:
       label: Tier
-      max: 6
+      max: 5
       value: 0
       description: |-
         Legacy tiers

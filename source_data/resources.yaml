@@ -1,0 +1,170 @@
+_id: legacies
+datasworn_version: "0.1.0"
+type: expansion
+ruleset: classic
+<<: &Source
+  title: 'Ironsworn: Legacies - Playtest'
+  authors:
+    - name: Shawn Tomkin
+  license: null
+  url: https://ironswornrpg.com
+  date: 2026-05-31
+assets:
+  resources:
+    type: asset_collection
+    _source:
+      <<: *Source
+    name: Resources
+    contents:
+      resource_one:
+        name: Resource 1
+        type: asset
+        category: Resources
+        _source:
+          <<: *Source
+        options:
+          name:
+            label: name
+            field_type: text
+            value: null
+          function:
+            label: function
+            field_type: text
+            value: null
+        abilities:
+          - name: Helpful
+            text: When you [Take Action](datasworn:move:legacies/action/take_action) using or aided by the resource, add +1.
+          - name: Durable
+            text: Add two additional impact slots to the resource (four total).
+          - name: Effective
+            text: When you pursue a new challenge objective with the direct aid of the resource, reduce the rank by one step.
+          - name: Fated
+            text: Before an objective roll, decide if you commit the resource. If you do, reroll any dice and lose the resource.
+          - name: Protective
+            text: When you [Take Action](datasworn:move:legacies/action/take_action), you can improve the result by one step (miss to weak hit, or weak hit to strong hit). If you do, mark a resource impact.
+          - name: Resilient
+            text: Impacts on this resource are unlocked. They can mend as standard minor impacts, but at a cost (1 boon per impact).
+          - name: Restorative
+            text: Mend two minor impacts on another target in exchange for marking an impact on this resource.
+          - name: Special
+            text: The resource grants access to actions or challenges that are otherwise beyond your scale or capabilities.
+        controls:
+          impacts:
+            max: 4
+            value: 0
+            field_type: condition_meter
+            label: Impacts
+      resource_two:
+        name: Resource 2
+        type: asset
+        category: Resources
+        _source:
+          <<: *Source
+        options:
+          name:
+            label: name
+            field_type: text
+            value: null
+          function:
+            label: function
+            field_type: text
+            value: null
+        abilities:
+          - name: Helpful
+            text: When you [Take Action](datasworn:move:legacies/action/take_action) using or aided by the resource, add +1.
+          - name: Durable
+            text: Add two additional impact slots to the resource (four total).
+          - name: Effective
+            text: When you pursue a new challenge objective with the direct aid of the resource, reduce the rank by one step.
+          - name: Fated
+            text: Before an objective roll, decide if you commit the resource. If you do, reroll any dice and lose the resource.
+          - name: Protective
+            text: When you [Take Action](datasworn:move:legacies/action/take_action), you can improve the result by one step (miss to weak hit, or weak hit to strong hit). If you do, mark a resource impact.
+          - name: Resilient
+            text: Impacts on this resource are unlocked. They can mend as standard minor impacts, but at a cost (1 boon per impact).
+          - name: Restorative
+            text: Mend two minor impacts on another target in exchange for marking an impact on this resource.
+          - name: Special
+            text: The resource grants access to actions or challenges that are otherwise beyond your scale or capabilities.
+        controls:
+          impacts:
+            max: 4
+            value: 0
+            field_type: condition_meter
+            label: Impacts
+      resource_three:
+        name: Resource 3
+        type: asset
+        category: Resources
+        _source:
+          <<: *Source
+        options:
+          name:
+            label: name
+            field_type: text
+            value: null
+          function:
+            label: function
+            field_type: text
+            value: null
+        abilities:
+          - name: Helpful
+            text: When you [Take Action](datasworn:move:legacies/action/take_action) using or aided by the resource, add +1.
+          - name: Durable
+            text: Add two additional impact slots to the resource (four total).
+          - name: Effective
+            text: When you pursue a new challenge objective with the direct aid of the resource, reduce the rank by one step.
+          - name: Fated
+            text: Before an objective roll, decide if you commit the resource. If you do, reroll any dice and lose the resource.
+          - name: Protective
+            text: When you [Take Action](datasworn:move:legacies/action/take_action), you can improve the result by one step (miss to weak hit, or weak hit to strong hit). If you do, mark a resource impact.
+          - name: Resilient
+            text: Impacts on this resource are unlocked. They can mend as standard minor impacts, but at a cost (1 boon per impact).
+          - name: Restorative
+            text: Mend two minor impacts on another target in exchange for marking an impact on this resource.
+          - name: Special
+            text: The resource grants access to actions or challenges that are otherwise beyond your scale or capabilities.
+        controls:
+          impacts:
+            max: 4
+            value: 0
+            field_type: condition_meter
+            label: Impacts
+      resource_four:
+        name: Resource 4
+        type: asset
+        category: Resources
+        _source:
+          <<: *Source
+        options:
+          name:
+            label: name
+            field_type: text
+            value: null
+          function:
+            label: function
+            field_type: text
+            value: null
+        abilities:
+          - name: Helpful
+            text: When you [Take Action](datasworn:move:legacies/action/take_action) using or aided by the resource, add +1.
+          - name: Durable
+            text: Add two additional impact slots to the resource (four total).
+          - name: Effective
+            text: When you pursue a new challenge objective with the direct aid of the resource, reduce the rank by one step.
+          - name: Fated
+            text: Before an objective roll, decide if you commit the resource. If you do, reroll any dice and lose the resource.
+          - name: Protective
+            text: When you [Take Action](datasworn:move:legacies/action/take_action), you can improve the result by one step (miss to weak hit, or weak hit to strong hit). If you do, mark a resource impact.
+          - name: Resilient
+            text: Impacts on this resource are unlocked. They can mend as standard minor impacts, but at a cost (1 boon per impact).
+          - name: Restorative
+            text: Mend two minor impacts on another target in exchange for marking an impact on this resource.
+          - name: Special
+            text: The resource grants access to actions or challenges that are otherwise beyond your scale or capabilities.
+        controls:
+          impacts:
+            max: 4
+            value: 0
+            field_type: condition_meter
+            label: Impacts

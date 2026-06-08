@@ -8,7 +8,7 @@ ruleset: classic
       - name: Shawn Tomkin
   license: null
   url: https://ironswornrpg.com
-  date: 2026-05-31
+  date: 2026-06-05
 moves:
   action:
     name: Action Moves
@@ -189,14 +189,14 @@ moves:
         tracks:
           category: Challenge
         trigger:
-          text: When you seize an objective...
+          text: When you attempt to seize an objective...
           conditions:
             - roll_options:
                 - using: progress_track
         _source:
           <<: *Source
         text: |-
-          When __you seize an objective__, test your progress score against the challenge dice. If you prematurely lose or abandon an objective, remove it from play without rolling.
+          When __you attempt to seize an objective__, test your progress score against the challenge dice. If you prematurely lose or abandon an objective, remove it from play without rolling.
 
           On a __strong hit__, the objective is achieved.
             * Take +1 advantage.
@@ -253,6 +253,51 @@ moves:
             * Decisive success: 2 boons
             * Limited success: 1 boon
             * Complete failure: No reward
+  pass_time:
+    name: Pass Time
+    type: move_category
+    _source:
+      <<: *Source
+    summary: |-
+      Pass Time
+    contents:
+      pass_time:
+        name: Pass Time
+        type: move
+        roll_type: no_roll
+        trigger:
+          text: you take a break, experience a lengthy delay or distraction, pursue a complex personal project, or are unwillingly pulled from your adventures...
+        _source:
+          <<: *Source
+        text: |-
+          When __you take a break, experience a lengthy delay or distraction, pursue a complex personal project, or are unwillingly pulled from your adventures__, time moves on.
+
+          Perform the following steps:
+
+          1. **Recover (optional)**
+            If you spend this time in a sheltered place with appropriate support, envision your recovery and do any of the following:
+              * Mend minor impacts: Automatically mend minor impacts (must mend severe impacts of the same category first).
+              * Mend severe impacts: Spend 3 boons to mend each severe impact. If you recover at a haven, mend one severe impact at no cost.
+              * Mend lasting impacts: Lock a minor impact of the same category, then mend the lasting impact.
+              * Reset momentum: Set momentum to its reset value.
+              * Adjust position: Set position to favored.
+
+          2. **Work on a downtime project (optional)**
+            [Take Action](datasworn:move:legacies/action/take_action) to work on a single complex project. On a hit, the project is complete and you earn 1 boon. In addition, you may convert any advantages gained on this action to boons.
+
+          3. **Explore an interlude (optional)**
+            If not in danger, envision a low-stakes interaction or situation during downtime.
+              * Uncertain interludes: You may [Take Action](datasworn:move:legacies/action/take_action) to overcome momentary obstacles or gain minor advantages during an interlude. If you do, you are favored and never tempt fate.
+              * Interlude benefit: If the outcome of the interlude is positive from your character’s perspective, earn 1 boon.
+
+          4. **Gather rewards**
+              * Havens: Earn 2 boons for each thriving haven.
+              * Other rewards: If an asset offers specific benefits when you Pass Time, take that reward.
+
+          5. **Manage world events**
+            To see what happens with other entities and threats as time passes, complete these procedures:
+              * Manage world timers: Play the World to see if other entities advance their agendas.
+              * Reveal dangers: [Test Your Legacy](datasworn:move:legacies/legacy/test_your_legacy) to see if you face sudden or emerging threats.
   legacy:
     name: Legacy Moves
     type: move_category

@@ -3,7 +3,7 @@ datasworn_version: "0.1.0"
 type: expansion
 ruleset: classic
 <<: &Source
-  title: 'Ironsworn: Legacies - Playtest'
+  title: 'Ironsworn: Legacies - Playtest 1A'
   authors:
     - name: Shawn Tomkin
   license: null

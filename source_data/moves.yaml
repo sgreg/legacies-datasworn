@@ -82,6 +82,10 @@ moves:
             * If position is desperate, take +1 misfortune and lose -1 momentum.
             * If you tempted fate, take +1 misfortune.
             * Lose position, if not already desperate.
+
+          Based on your intent, risk, and method, [Gain Advantage](datasworn:move:legacies/action/gain_advantage) and [Suffer Misfortune](datasworn:move:legacies/action/suffer_misfortune) to assign all effects. Envision the result.
+
+          When you roll a match on the challenge dice, assign advantages and misfortunes to surprising interpretations or effects.
         outcomes:
           strong_hit:
             text: |-
@@ -104,6 +108,44 @@ moves:
                 * If position is desperate, take +1 misfortune and lose -1 momentum.
                 * If you tempted fate, take +1 misfortune.
                 * Lose position, if not already desperate.
+      gain_advantage:
+        name: Gain Advantage
+        type: move
+        roll_type: no_roll
+        trigger:
+          text: When you achieve success...
+        _source:
+          <<: *Source
+        text: |-
+          When __you achieve success__, assign advantages to one or more effects. Each ● costs 1 advantage. You can assign advantages to multiples of one effect, but max 3 per effect.
+
+          Advantage Effect | Cost
+          ---- | ----
+          **Mark challenge progress** | ●
+          **Gain 1 momentum** | ●
+          **Overcome a setback** | ●
+          **Mend a minor impact** | ●●
+          **Find an opportunity**: A promising occurrence or insight offers leverage. Once only, if you [Take Action](datasworn:move:legacies/action/take_action) to act on the opportunity, you are favored and add +1. | ●●
+          **Make a discovery**: A fateful revelation, sighting, or encounter advances your legacy. Once only, if you act on, investigate, or leverage the discovery, earn 2 boons. | ●●●
+      suffer_misfortune:
+        name: Suffer Misfortune
+        type: move
+        roll_type: no_roll
+        trigger:
+          text: When you fail or pay a cost...
+        _source:
+          <<: *Source
+        text: |-
+          When __you fail or pay a cost__, assign misfortunes to one or more effects. Each ● costs 1 misfortune. You can assign misfortunes to multiples of one effect, but max 3 per effect.
+
+          Misfortune Effect | Cost
+          ---- | ----
+          **Mark an impact** | ●
+          **Lose 1 momentum** | ●
+          **Face a setback**: A complication blocks your progress To move forward, [Take Action](datasworn:move:legacies/action/take_action) and overcome a setback. | ●
+          **Increase tension**: Danger looms. Add or mark a four-segment tension timer (mark two segments on a match). Once you mark the last segment, encounter a peril. | ●
+          **Encounter a peril**: The situation worsens. [Take on a Challenge](datasworn:move:legacies/challenge/take_on_a_challenge), abandon an existing challenge, or both. | ●●
+          **Trigger a crisis**: A fateful event threatens your legacy. If you [Undertake a Quest](datasworn:move:legacies/quest/undertake_a_quest) to oppose the crisis, earn 2 boons. If not, clear legacy (2 legacy for a lost advancement). | ●●●
   quest:
     name: Quest Moves
     type: move_category
@@ -193,11 +235,11 @@ moves:
         text: |-
           When __you face a lengthy effort, hazardous encounter, or complex task__, name the challenge objective and give it a progress track. If unsure of the rank, make it formidable.
 
-          To push towards the objective, [Take Action](datasworn:move:legacies/action/take_action). On a hit, Gain Advantage, choose the _mark challenge progress_ effect, and mark progress per the challenge rank.
+          To push towards the objective, [Take Action](datasworn:move:legacies/action/take_action). On a hit, [Gain Advantage](datasworn:move:legacies/action/gain_advantage), choose the _mark challenge progress_ effect, and mark progress per the challenge rank.
 
           If a setback or another challenge stands in the way of your progress, resolve that hindrance first.
 
-          If you prematurely lose or quit the challenge, remove it from play and Suffer Misfortune (+1 misfortune or more as appropriate).
+          If you prematurely lose or quit the challenge, remove it from play and [Suffer Misfortune](datasworn:move:legacies/action/suffer_misfortune) (+1 misfortune or more as appropriate).
       resolve_a_challenge:
         name: Resolve a Challenge
         type: move

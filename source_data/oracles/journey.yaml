@@ -1,0 +1,571 @@
+_id: legacies
+datasworn_version: "0.1.0"
+type: expansion
+ruleset: classic
+oracles:
+  journey:
+    _source:
+      <<: &Source
+        title: 'Ironsworn: Legacies - Playtest 1B'
+        authors:
+          - name: Shawn Tomkin
+        license: null
+        url: https://ironswornrpg.com
+        date: 2026-06-10
+    name: Journey Codex
+    type: oracle_collection
+    oracle_type: tables
+    contents:
+      rumors:
+        name: Journey Rumors
+        type: oracle_rollable
+        oracle_type: table_text
+        _source:
+          <<: *Source
+        rows:
+          - roll: { min: 1, max: 5 }
+            text: Forsaken settlement lies abandoned
+          - roll: { min: 6, max: 10 }
+            text: Bad weather lingers
+          - roll: { min: 11, max: 15 }
+            text: Aggressive wildlife hounds travelers
+          - roll: { min: 16, max: 20 }
+            text: Caravan never arrived at its destination
+          - roll: { min: 21, max: 25 }
+            text: Settlement welcomes weary travelers
+          - roll: { min: 26, max: 30 }
+            text: Ancient site reclaimed by new occupants
+          - roll: { min: 31, max: 35 }
+            text: Settlement went mysteriously quiet
+          - roll: { min: 36, max: 40 }
+            text: Direct route is the most dangerous
+          - roll: { min: 41, max: 45 }
+            text: Soldiers are on the march
+          - roll: { min: 46, max: 50 }
+            text: Community rejects outsiders
+          - roll: { min: 51, max: 55 }
+            text: Faction demands tribute for safe passage
+          - roll: { min: 56, max: 60 }
+            text: Pilgrims travel to a sacred site
+          - roll: { min: 61, max: 65 }
+            text: Broken or blocked path forces a detour
+          - roll: { min: 66, max: 70 }
+            text: Raiders prey upon travelers
+          - roll: { min: 71, max: 75 }
+            text: Guardians protect sacred ground
+          - roll: { min: 76, max: 80 }
+            text: Mysterious disappearances plague the area
+          - roll: { min: 81, max: 85 }
+            text: Factions clash over disputed lands
+          - roll: { min: 86, max: 90 }
+            text: Territory claimed by a powerful beast
+          - roll: { min: 91, max: 95 }
+            text: Beguiling spirits lead travelers astray
+          - roll: { min: 96, max: 100 }
+            text: The dead walk this path
+      vignettes:
+        name: Journey Vignettes
+        type: oracle_rollable
+        oracle_type: table_text
+        _source:
+          <<: *Source
+        rows:
+          - roll: { min: 1, max: 10 }
+            text: What distant landmark catches your eye?
+          - roll: { min: 11, max: 20 }
+            text: What is left by another who passed this way?
+          - roll: { min: 21, max: 30 }
+            text: How does the landscape change?
+          - roll: { min: 31, max: 40 }
+            text: What memory does this place bring to mind?
+          - roll: { min: 41, max: 50 }
+            text: What aspect of the environment is out of place?
+          - roll: { min: 51, max: 60 }
+            text: How does the season manifest?
+          - roll: { min: 61, max: 70 }
+            text: What worry adds to your burden?
+          - roll: { min: 71, max: 80 }
+            text: What legend or story does this place evoke?
+          - roll: { min: 81, max: 90 }
+            text: What curious creature shadows you?
+          - roll: { min: 91, max: 100 }
+            text: What ancient thing endures here?
+      descriptor:
+        name: Journey Descriptor
+        type: oracle_rollable
+        oracle_type: table_text
+        dice: 1d200
+        _source:
+          <<: *Source
+        rows:
+          - roll: { min: 1, max: 7 }
+            text: Abundant
+          - roll: { min: 8, max: 14 }
+            text: Expansive
+          - roll: { min: 15, max: 21 }
+            text: Broken
+          - roll: { min: 22, max: 28 }
+            text: Overgrown
+          - roll: { min: 29, max: 35 }
+            text: Deep
+          - roll: { min: 36, max: 42 }
+            text: Ravaged
+          - roll: { min: 43, max: 49 }
+            text: Towering
+          - roll: { min: 50, max: 56 }
+            text: Flooded
+          - roll: { min: 57, max: 63 }
+            text: Bloodied
+          - roll: { min: 64, max: 70 }
+            text: Corrupted
+          - roll: { min: 71, max: 76 }
+            text: Impressive
+          - roll: { min: 77, max: 82 }
+            text: Uncanny
+          - roll: { min: 83, max: 88 }
+            text: Sheltered
+          - roll: { min: 89, max: 94 }
+            text: Sacred
+          - roll: { min: 95, max: 100 }
+            text: Ancient
+          - roll: { min: 101, max: 107 }
+            text: Wild
+          - roll: { min: 108, max: 114 }
+            text: Inhabited
+          - roll: { min: 115, max: 121 }
+            text: Forgotten
+          - roll: { min: 122, max: 128 }
+            text: Hidden
+          - roll: { min: 129, max: 135 }
+            text: Blocked
+          - roll: { min: 136, max: 142 }
+            text: Isolated
+          - roll: { min: 143, max: 149 }
+            text: Defended
+          - roll: { min: 150, max: 156 }
+            text: Barren
+          - roll: { min: 157, max: 163 }
+            text: Trapped
+          - roll: { min: 164, max: 170 }
+            text: Secret
+          - roll: { min: 171, max: 176 }
+            text: Guarded
+          - roll: { min: 177, max: 182 }
+            text: Frozen
+          - roll: { min: 183, max: 188 }
+            text: Legendary
+          - roll: { min: 189, max: 194 }
+            text: Haunted
+          - roll: { min: 195, max: 200 }
+            text: Mystical
+      focus:
+        name: Journey Focus
+        type: oracle_rollable
+        oracle_type: table_text
+        dice: 1d200
+        _source:
+          <<: *Source
+        rows:
+          - roll: { min: 1, max: 7 }
+            text: Water
+          - roll: { min: 8, max: 14 }
+            text: Wood
+          - roll: { min: 15, max: 21 }
+            text: Stone
+          - roll: { min: 22, max: 28 }
+            text: Remains
+          - roll: { min: 29, max: 35 }
+            text: Opening
+          - roll: { min: 36, max: 42 }
+            text: Camp
+          - roll: { min: 43, max: 49 }
+            text: Ruin
+          - roll: { min: 50, max: 56 }
+            text: Environment
+          - roll: { min: 57, max: 63 }
+            text: Person
+          - roll: { min: 64, max: 70 }
+            text: Resource
+          - roll: { min: 71, max: 76 }
+            text: Barrier
+          - roll: { min: 77, max: 82 }
+            text: Grave
+          - roll: { min: 83, max: 88 }
+            text: Refuge
+          - roll: { min: 89, max: 94 }
+            text: Worksite
+          - roll: { min: 95, max: 100 }
+            text: Structure
+          - roll: { min: 101, max: 107 }
+            text: Creature
+          - roll: { min: 108, max: 114 }
+            text: Elevation
+          - roll: { min: 115, max: 121 }
+            text: Dwelling
+          - roll: { min: 122, max: 128 }
+            text: Path
+          - roll: { min: 129, max: 135 }
+            text: Crossing
+          - roll: { min: 136, max: 142 }
+            text: Landscape
+          - roll: { min: 143, max: 149 }
+            text: Landmark
+          - roll: { min: 150, max: 156 }
+            text: Battleground
+          - roll: { min: 157, max: 163 }
+            text: Trail
+          - roll: { min: 164, max: 170 }
+            text: Lair
+          - roll: { min: 171, max: 176 }
+            text: Transport
+          - roll: { min: 177, max: 182 }
+            text: UncannyGraveFrozenMire
+          - roll: { min: 183, max: 188 }
+            text: Monument
+          - roll: { min: 189, max: 194 }
+            text: Community
+          - roll: { min: 195, max: 200 }
+            text: Gathering
+      what_went_wrong:
+        name: What Went Wrong?
+        type: oracle_rollable
+        oracle_type: table_text
+        _source:
+          <<: *Source
+        rows:
+          - roll: { min: 1, max: 10 }
+            text: Objective destroyed
+          - roll: { min: 11, max: 20 }
+            text: Objective missing
+          - roll: { min: 21, max: 30 }
+            text: Objective relocated
+          - roll: { min: 31, max: 40 }
+            text: Objective was a trap
+          - roll: { min: 41, max: 50 }
+            text: Objective held by a rival or enemy
+          - roll: { min: 51, max: 60 }
+            text: Misled about the objective
+          - roll: { min: 61, max: 70 }
+            text: You are hopelessly lost or astray
+          - roll: { min: 71, max: 80 }
+            text: You are too late
+          - roll: { min: 81, max: 90 }
+            text: Forced to turn back
+          - roll: { min: 91, max: 100 }
+            text: Rival arrived ahead of you
+    collections:
+      advantages:
+        name: Journey Advantages
+        type: oracle_collection
+        oracle_type: tables
+        _source:
+          <<: *Source
+        contents:
+          gain_momentum:
+            name: Gain Momentum
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 20 }
+                text: Favorable terrain
+              - roll: { min: 21, max: 40 }
+                text: Quick pace
+              - roll: { min: 41, max: 60 }
+                text: Fair weather
+              - roll: { min: 61, max: 75 }
+                text: Well-used path
+              - roll: { min: 76, max: 90 }
+                text: Prominent landmark
+              - roll: { min: 91, max: 100 }
+                text: Good omen
+          find_an_opportunity:
+            name: Find an Opportunity
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Vantage point
+              - roll: { min: 16, max: 30 }
+                text: Plentiful foraging or game
+              - roll: { min: 31, max: 45 }
+                text: Sheltered resting place
+              - roll: { min: 46, max: 55 }
+                text: Potential shortcut
+              - roll: { min: 56, max: 65 }
+                text: Abandoned site
+              - roll: { min: 66, max: 75 }
+                text: Good-natured travelers
+              - roll: { min: 76, max: 85 }
+                text: Isolated community
+              - roll: { min: 86, max: 90 }
+                text: Forewarning of an enemy
+              - roll: { min: 91, max: 95 }
+                text: Helpful creature
+              - roll: { min: 96, max: 100 }
+                text: Sacred shrine
+          make_a_discovery:
+            name: Make a Discovery
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Awe-inspiring landmark
+              - roll: { min: 16, max: 30 }
+                text: Mysterious ruin
+              - roll: { min: 31, max: 45 }
+                text: Untapped resource
+              - roll: { min: 46, max: 55 }
+                text: Powerful monument
+              - roll: { min: 56, max: 65 }
+                text: Secret refuge
+              - roll: { min: 66, max: 75 }
+                text: Gifted wanderer
+              - roll: { min: 76, max: 85 }
+                text: Legendary creature
+              - roll: { min: 86, max: 90 }
+                text: Forgotten relic
+              - roll: { min: 91, max: 95 }
+                text: Otherworldly path
+              - roll: { min: 96, max: 100 }
+                text: Benevolent spirit
+      misfortunes:
+        name: Journey Misfortunes
+        type: oracle_collection
+        oracle_type: tables
+        _source:
+          <<: *Source
+        contents:
+          mark_an_impact:
+            name: Mark an Impact
+            type: oracle_rollable
+            oracle_type: table_text
+            dice: 1d10
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 3 }
+                text: "[Personal (Health)](datasworn:oracle_rollable:legacies/journey/misfortunes/mark_an_impact/health_impact)"
+                oracle_rolls:
+                  - oracle: oracle_rollable:legacies/journey/misfortunes/mark_an_impact/health_impact
+                    auto: true
+              - roll: { min: 4, max: 5 }
+                text: "[Personal (Spirit)](datasworn:oracle_rollable:legacies/journey/misfortunes/mark_an_impact/spirit_impact)"
+                oracle_rolls:
+                  - oracle: oracle_rollable:legacies/journey/misfortunes/mark_an_impact/spirit_impact
+                    auto: true
+              - roll: { min: 6, max: 8 }
+                text: "[Personal (Supply)](datasworn:oracle_rollable:legacies/journey/misfortunes/mark_an_impact/supply_impact)"
+                oracle_rolls:
+                  - oracle: oracle_rollable:legacies/journey/misfortunes/mark_an_impact/supply_impact
+                    auto: true
+              - roll: { min: 9, max: 10 }
+                text: Other (Asset or resource)
+          lose_momentum:
+            name: Lose Momentum
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Rough ground
+              - roll: { min: 16, max: 30 }
+                text: Foul weather
+              - roll: { min: 31, max: 45 }
+                text: Steep ascent
+              - roll: { min: 46, max: 55 }
+                text: Dense or overgrown terrain
+              - roll: { min: 56, max: 65 }
+                text: Poor visibility
+              - roll: { min: 66, max: 75 }
+                text: Overburdened
+              - roll: { min: 76, max: 85 }
+                text: Snow, mud, or quagmire
+              - roll: { min: 86, max: 90 }
+                text: Forced to backtrack
+              - roll: { min: 91, max: 95 }
+                text: Confounding landmarks
+              - roll: { min: 96, max: 100 }
+                text: Unnatural gloom
+          face_a_setback:
+            name: Face a Setback
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Treacherous terrain
+              - roll: { min: 16, max: 30 }
+                text: Violent storm
+              - roll: { min: 31, max: 45 }
+                text: Endurance tested
+              - roll: { min: 46, max: 55 }
+                text: Disorienting path
+              - roll: { min: 56, max: 65 }
+                text: Guarded or watched path
+              - roll: { min: 66, max: 75 }
+                text: Tense confrontation
+              - roll: { min: 76, max: 85 }
+                text: Precarious climb or crossing
+              - roll: { min: 86, max: 90 }
+                text: Stricken traveler
+              - roll: { min: 91, max: 95 }
+                text: Mystic barrier or ward
+              - roll: { min: 96, max: 100 }
+                text: Beguiling spirit
+          increase_tension:
+            name: Increase Tension
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Worsening weather
+              - roll: { min: 16, max: 30 }
+                text: Predator has your scent
+              - roll: { min: 31, max: 45 }
+                text: Rival moves ahead
+              - roll: { min: 46, max: 55 }
+                text: Enemy closes in
+              - roll: { min: 56, max: 65 }
+                text: Howling creatures
+              - roll: { min: 66, max: 75 }
+                text: Relentless pursuer
+              - roll: { min: 76, max: 85 }
+                text: Deeper into enemy territory
+              - roll: { min: 86, max: 90 }
+                text: Sense of being watched
+              - roll: { min: 91, max: 95 }
+                text: Signs of territorial beast
+              - roll: { min: 96, max: 100 }
+                text: Grim warnings or omens
+          encounter_a_peril:
+            name: Encounter a Peril
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Perilous detour
+              - roll: { min: 16, max: 30 }
+                text: Aggressive creature
+              - roll: { min: 31, max: 45 }
+                text: Someone else in peril
+              - roll: { min: 46, max: 55 }
+                text: Caught in an ambush or trap
+              - roll: { min: 56, max: 65 }
+                text: Predatory pack
+              - roll: { min: 66, max: 75 }
+                text: Enemy guards the path
+              - roll: { min: 76, max: 85 }
+                text: Swarming creatures
+              - roll: { min: 86, max: 90 }
+                text: Ferocious beast
+              - roll: { min: 91, max: 95 }
+                text: Horrible monstrosity
+              - roll: { min: 96, max: 100 }
+                text: Malevolent undead
+          trigger_a_crisis:
+            name: Trigger a Crisis
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Dreadful news reaches you
+              - roll: { min: 16, max: 30 }
+                text: Community faces dire threat
+              - roll: { min: 31, max: 45 }
+                text: Betrayal in your absence
+              - roll: { min: 46, max: 55 }
+                text: Settlement destroyed
+              - roll: { min: 56, max: 65 }
+                text: Caravan lost or destroyed
+              - roll: { min: 66, max: 75 }
+                text: Dying traveler's plea
+              - roll: { min: 76, max: 85 }
+                text: Refugees flee a disaster
+              - roll: { min: 86, max: 90 }
+                text: Area overtaken by enemy
+              - roll: { min: 91, max: 95 }
+                text: Trail of unnatural destruction
+              - roll: { min: 96, max: 100 }
+                text: Vision or signs of a grim fate
+        collections:
+          mark_an_impact:
+            name: Mark an Impact
+            type: oracle_collection
+            oracle_type: tables
+            _source:
+              <<: *Source
+            contents:
+              health_impact:
+                name: Health Impact
+                type: oracle_rollable
+                oracle_type: table_text
+                dice: 1d10
+                _source:
+                  <<: *Source
+                rows:
+                  - roll: { min: 1, max: 3 }
+                    text: Exhausting effort
+                  - roll: { min: 4, max: 5 }
+                    text: Exposure to the elements
+                  - roll: { min: 6, max: 7 }
+                    text: Harmful fall
+                  - roll: { min: 8, max: 8 }
+                    text: Countless nicks and cuts
+                  - roll: { min: 9, max: 9 }
+                    text: Old pain resurfaces
+                  - roll: { min: 10, max: 10 }
+                    text: Toxic environment
+              spirit_impact:
+                name: Spirit Impact
+                type: oracle_rollable
+                oracle_type: table_text
+                dice: 1d10
+                _source:
+                  <<: *Source
+                rows:
+                  - roll: { min: 1, max: 3 }
+                    text: Loneliness or isolation
+                  - roll: { min: 4, max: 5 }
+                    text: Gloomy weather
+                  - roll: { min: 6, max: 7 }
+                    text: Plagued by worry
+                  - roll: { min: 8, max: 8 }
+                    text: Unwelcome memory
+                  - roll: { min: 9, max: 9 }
+                    text: Grim landmark
+                  - roll: { min: 10, max: 10 }
+                    text: Grisly remains
+              supply_impact:
+                name: Supply Impact
+                type: oracle_rollable
+                oracle_type: table_text
+                dice: 1d10
+                _source:
+                  <<: *Source
+                rows:
+                  - roll: { min: 1, max: 3 }
+                    text: Dwindling provisions
+                  - roll: { min: 4, max: 5 }
+                    text: Wear and tear
+                  - roll: { min: 6, max: 7 }
+                    text: Damaged gear
+                  - roll: { min: 8, max: 8 }
+                    text: Lost or broken gear
+                  - roll: { min: 9, max: 9 }
+                    text: Mysterious sabotage
+                  - roll: { min: 10, max: 10 }
+                    text: Corrupted supply

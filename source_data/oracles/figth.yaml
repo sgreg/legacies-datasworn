@@ -1,0 +1,584 @@
+_id: legacies
+datasworn_version: "0.1.0"
+type: expansion
+ruleset: classic
+oracles:
+  fight:
+    _source:
+      <<: &Source
+        title: 'Ironsworn: Legacies - Playtest 1B'
+        authors:
+          - name: Shawn Tomkin
+        license: null
+        url: https://ironswornrpg.com
+        date: 2026-06-10
+    name: Fight Codex
+    type: oracle_collection
+    oracle_type: tables
+    contents:
+      environment:
+        name: Fight Environment
+        type: oracle_rollable
+        oracle_type: table_text
+        _source:
+          <<: *Source
+        rows:
+          - roll: { min: 1, max: 5 }
+            text: '**High ground**: Mound, outcropping, climbable structure'
+          - roll: { min: 6, max: 10 }
+            text: '**Cluttered terrain**: Rubble, rocks, roots'
+          - roll: { min: 11, max: 15 }
+            text: '**Scattered cover**: Low walls, boulders, trees, crates'
+          - roll: { min: 16, max: 20 }
+            text: '**Hindering terrain**: Water, muck, snow, thickets'
+          - roll: { min: 21, max: 25 }
+            text: '**Obstructed path**: Barricade, toppled ruin, fallen tree'
+          - roll: { min: 26, max: 30 }
+            text: '**Bounded space**: Dueling circle, clearing, standing stones'
+          - roll: { min: 31, max: 35 }
+            text: '**Cramped spaces**: Narrow tunnel, crowded room, dense woods'
+          - roll: { min: 36, max: 40 }
+            text: '**Pitched terrain**: Steep hillside, rooftop, collapsed ruin, ship deck'
+          - roll: { min: 41, max: 45 }
+            text: '**Choke point**: Bridge, corridor, river ford, narrow defile'
+          - roll: { min: 46, max: 50 }
+            text: '**Impassable barrier**: Deep waterway, high wall, cliff face'
+          - roll: { min: 51, max: 55 }
+            text: '**Low visibility**: Darkness, smoke, fog, torrential rain'
+          - roll: { min: 56, max: 60 }
+            text: '**Precipitous drop**: Cliff edge, ravine, pit, plummeting stairs'
+          - roll: { min: 61, max: 65 }
+            text: '**Slippery surface**: Mud, ice, scree, rain-slick rocks'
+          - roll: { min: 66, max: 70 }
+            text: '**Fragile terrain**: Crumbling ruins, thin ice, undermined earth'
+          - roll: { min: 71, max: 75 }
+            text: '**Frantic distractions**: Noncombatants, creatures, insect swarms'
+          - roll: { min: 76, max: 80 }
+            text: '**Hidden hazard**: Trap, sinkhole, lurking creature, ambushers'
+          - roll: { min: 81, max: 85 }
+            text: '**Treacherous ground**: Fire pit, boiling hot spring, quagmire'
+          - roll: { min: 86, max: 90 }
+            text: '**Destructive chaos**: Storm, fire, flooding, rampaging creature'
+          - roll: { min: 91, max: 95 }
+            text: '**Unnatural forces**: Mystic energies, corruption, eldritch monuments'
+          - roll: { min: 96, max: 100 }
+            text: '**Cursed ground**: Corpses, risen dead, specters, blighted terrain'
+      method:
+        name: Fight Method
+        type: oracle_rollable
+        oracle_type: table_text
+        dice: 1d200
+        _source:
+          <<: *Source
+        rows:
+          - roll: { min: 1, max: 5 }
+            text: Aid
+          - roll: { min: 6, max: 10 }
+            text: Focus
+          - roll: { min: 11, max: 15 }
+            text: Bolster
+          - roll: { min: 16, max: 20 }
+            text: Advance
+          - roll: { min: 21, max: 25 }
+            text: Protect
+          - roll: { min: 26, max: 30 }
+            text: Aim
+          - roll: { min: 31, max: 35 }
+            text: Focus
+          - roll: { min: 36, max: 40 }
+            text: Challenge
+          - roll: { min: 41, max: 45 }
+            text: Distract
+          - roll: { min: 46, max: 50 }
+            text: Evade
+          - roll: { min: 51, max: 55 }
+            text: Charge
+          - roll: { min: 56, max: 60 }
+            text: Counter
+          - roll: { min: 61, max: 65 }
+            text: Break
+          - roll: { min: 66, max: 70 }
+            text: Breach
+          - roll: { min: 71, max: 75 }
+            text: Persevere
+          - roll: { min: 76, max: 80 }
+            text: Ambush
+          - roll: { min: 81, max: 85 }
+            text: Brawl
+          - roll: { min: 86, max: 90 }
+            text: Ensnare
+          - roll: { min: 91, max: 95 }
+            text: Endure
+          - roll: { min: 96, max: 100 }
+            text: Curse
+          - roll: { min: 101, max: 105 }
+            text: Use
+          - roll: { min: 106, max: 110 }
+            text: Protect
+          - roll: { min: 111, max: 115 }
+            text: Hold
+          - roll: { min: 116, max: 120 }
+            text: Push
+          - roll: { min: 121, max: 125 }
+            text: Resist
+          - roll: { min: 126, max: 130 }
+            text: Strike
+          - roll: { min: 131, max: 135 }
+            text: Feint
+          - roll: { min: 136, max: 140 }
+            text: Clash
+          - roll: { min: 141, max: 145 }
+            text: Trick
+          - roll: { min: 146, max: 150 }
+            text: Grapple
+          - roll: { min: 151, max: 155 }
+            text: Pursue
+          - roll: { min: 156, max: 160 }
+            text: Seize
+          - roll: { min: 161, max: 165 }
+            text: Sunder
+          - roll: { min: 166, max: 170 }
+            text: Surround
+          - roll: { min: 171, max: 175 }
+            text: Escalate
+          - roll: { min: 176, max: 180 }
+            text: Withdraw
+          - roll: { min: 181, max: 185 }
+            text: Threaten
+          - roll: { min: 186, max: 190 }
+            text: Grapple
+          - roll: { min: 191, max: 195 }
+            text: Invoke
+          - roll: { min: 196, max: 200 }
+            text: Summon
+      target:
+        name: Fight Target
+        type: oracle_rollable
+        oracle_type: table_text
+        dice: 1d200
+        _source:
+          <<: *Source
+        rows:
+          - roll: { min: 1, max: 5 }
+            text: Ally
+          - roll: { min: 6, max: 10 }
+            text: Technique
+          - roll: { min: 11, max: 15 }
+            text: Courage
+          - roll: { min: 16, max: 20 }
+            text: Distance
+          - roll: { min: 21, max: 25 }
+            text: Objective
+          - roll: { min: 26, max: 30 }
+            text: Vulnerability
+          - roll: { min: 31, max: 35 }
+            text: Senses
+          - roll: { min: 36, max: 40 }
+            text: Strength
+          - roll: { min: 41, max: 45 }
+            text: Concentration
+          - roll: { min: 46, max: 50 }
+            text: Movement
+          - roll: { min: 51, max: 55 }
+            text: Terrain
+          - roll: { min: 56, max: 60 }
+            text: Technique
+          - roll: { min: 61, max: 65 }
+            text: Shield
+          - roll: { min: 66, max: 70 }
+            text: Barrier
+          - roll: { min: 71, max: 75 }
+            text: Stamina
+          - roll: { min: 76, max: 80 }
+            text: Enemy
+          - roll: { min: 81, max: 85 }
+            text: Body
+          - roll: { min: 86, max: 90 }
+            text: Movement
+          - roll: { min: 91, max: 95 }
+            text: Injury
+          - roll: { min: 96, max: 100 }
+            text: Courage
+          - roll: { min: 101, max: 105 }
+            text: Resource
+          - roll: { min: 106, max: 110 }
+            text: Object
+          - roll: { min: 111, max: 115 }
+            text: Ground
+          - roll: { min: 116, max: 120 }
+            text: Opening
+          - roll: { min: 121, max: 125 }
+            text: Offense
+          - roll: { min: 126, max: 130 }
+            text: Weapon
+          - roll: { min: 131, max: 135 }
+            text: Timing
+          - roll: { min: 136, max: 140 }
+            text: Stance
+          - roll: { min: 141, max: 145 }
+            text: Strategy
+          - roll: { min: 146, max: 150 }
+            text: Footing
+          - roll: { min: 151, max: 155 }
+            text: Escape
+          - roll: { min: 156, max: 160 }
+            text: Power
+          - roll: { min: 161, max: 165 }
+            text: Armor
+          - roll: { min: 166, max: 170 }
+            text: Position
+          - roll: { min: 171, max: 175 }
+            text: Environment
+          - roll: { min: 176, max: 180 }
+            text: Defense
+          - roll: { min: 181, max: 185 }
+            text: Fear
+          - roll: { min: 186, max: 190 }
+            text: Supply
+          - roll: { min: 191, max: 195 }
+            text: Mysticism
+          - roll: { min: 196, max: 200 }
+            text: Death
+      a_second_chance:
+        name: A Second Chance
+        type: oracle_rollable
+        oracle_type: table_text
+        _source:
+          <<: *Source
+        rows:
+          - roll: { min: 1, max: 10 }
+            text: Given a costly ultimatum
+          - roll: { min: 11, max: 20 }
+            text: Mistaken for dead
+          - roll: { min: 21, max: 30 }
+            text: Taken prisoner
+          - roll: { min: 31, max: 40 }
+            text: Offered unexpected mercy
+          - roll: { min: 41, max: 50 }
+            text: Looted and left to your fate
+          - roll: { min: 51, max: 60 }
+            text: Last-minute rescue
+          - roll: { min: 61, max: 70 }
+            text: Given an opening to escape
+          - roll: { min: 71, max: 80 }
+            text: Awaken in a mysterious location
+          - roll: { min: 81, max: 90 }
+            text: Uncanny forces intervene
+          - roll: { min: 91, max: 100 }
+            text: Rejected by death
+    collections:
+      advantages:
+        name: Fight Advantages
+        type: oracle_collection
+        oracle_type: tables
+        _source:
+          <<: *Source
+        contents:
+          gain_momentum:
+            name: Gain Momentum
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 20 }
+                text: Gaining ground
+              - roll: { min: 21, max: 40 }
+                text: Second wind
+              - roll: { min: 41, max: 60 }
+                text: Skillful maneuver
+              - roll: { min: 61, max: 75 }
+                text: Perfect timing
+              - roll: { min: 76, max: 90 }
+                text: Brief respite
+              - roll: { min: 91, max: 100 }
+                text: Lucky break
+          find_an_opportunity:
+            name: Find an Opportunity
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Advantageous terrain
+              - roll: { min: 16, max: 30 }
+                text: Spot a vulnerability
+              - roll: { min: 31, max: 45 }
+                text: Create an opening
+              - roll: { min: 46, max: 55 }
+                text: Timely distraction
+              - roll: { min: 56, max: 65 }
+                text: Cover or concealment
+              - roll: { min: 66, max: 75 }
+                text: Enemy on the defensive
+              - roll: { min: 76, max: 85 }
+                text: Telegraphed maneuver
+              - roll: { min: 86, max: 90 }
+                text: Enemy off-balance or prone
+              - roll: { min: 91, max: 95 }
+                text: Helpful object or resource
+              - roll: { min: 96, max: 100 }
+                text: Enemy disarmed
+          make_a_discovery:
+            name: Make a Discovery
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Enemy motives laid bare
+              - roll: { min: 16, max: 30 }
+                text: Surprising new ally appears
+              - roll: { min: 31, max: 45 }
+                text: True identity exposed
+              - roll: { min: 46, max: 55 }
+                text: Unexpected alliance or pact
+              - roll: { min: 56, max: 65 }
+                text: Schism among enemies
+              - roll: { min: 66, max: 75 }
+                text: Enemy serves another
+              - roll: { min: 76, max: 85 }
+                text: Weakness revealed
+              - roll: { min: 86, max: 90 }
+                text: Rare weapon or artifact
+              - roll: { min: 91, max: 95 }
+                text: Mystic insight or vision
+              - roll: { min: 96, max: 100 }
+                text: Inner power awakens
+      misfortunes:
+        name: Fight Misfortunes
+        type: oracle_collection
+        oracle_type: tables
+        _source:
+          <<: *Source
+        contents:
+          mark_an_impact:
+            name: Mark an Impact
+            type: oracle_rollable
+            oracle_type: table_text
+            dice: 1d10
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 3 }
+                text: "[Personal (Health)](datasworn:oracle_rollable:legacies/fight/misfortunes/mark_an_impact/health_impact)"
+                oracle_rolls:
+                  - oracle: oracle_rollable:legacies/fight/misfortunes/mark_an_impact/health_impact
+                    auto: true
+              - roll: { min: 4, max: 5 }
+                text: "[Personal (Spirit)](datasworn:oracle_rollable:legacies/fight/misfortunes/mark_an_impact/spirit_impact)"
+                oracle_rolls:
+                  - oracle: oracle_rollable:legacies/fight/misfortunes/mark_an_impact/spirit_impact
+                    auto: true
+              - roll: { min: 6, max: 8 }
+                text: "[Personal (Supply)](datasworn:oracle_rollable:legacies/fight/misfortunes/mark_an_impact/supply_impact)"
+                oracle_rolls:
+                  - oracle: oracle_rollable:legacies/fight/misfortunes/mark_an_impact/supply_impact
+                    auto: true
+              - roll: { min: 9, max: 10 }
+                text: Other (Asset or resource)
+          lose_momentum:
+            name: Lose Momentum
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Momentarily distracted
+              - roll: { min: 16, max: 30 }
+                text: Costly hesitation
+              - roll: { min: 31, max: 45 }
+                text: Overextended
+              - roll: { min: 46, max: 55 }
+                text: Ineffective maneuver
+              - roll: { min: 56, max: 65 }
+                text: Staggered or unsteady
+              - roll: { min: 66, max: 75 }
+                text: Forced to regroup
+              - roll: { min: 76, max: 85 }
+                text: Driven back
+              - roll: { min: 86, max: 90 }
+                text: Out of reach
+              - roll: { min: 91, max: 95 }
+                text: Held at bay
+              - roll: { min: 96, max: 100 }
+                text: Cursed luck
+          face_a_setback:
+            name: Face a Setback
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Hindering or difficult ground
+              - roll: { min: 16, max: 30 }
+                text: Put on the defensive
+              - roll: { min: 31, max: 45 }
+                text: Courage tested
+              - roll: { min: 46, max: 55 }
+                text: Grappled or restrained
+              - roll: { min: 56, max: 65 }
+                text: Disarmed
+              - roll: { min: 66, max: 75 }
+                text: Surrounded or swarmed
+              - roll: { min: 76, max: 85 }
+                text: Knocked prone
+              - roll: { min: 86, max: 90 }
+                text: Caught by surprise
+              - roll: { min: 91, max: 95 }
+                text: Resistant defenses
+              - roll: { min: 96, max: 100 }
+                text: Targeted by uncanny power
+          increase_tension:
+            name: Increase Tension
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Reinforcements approach
+              - roll: { min: 16, max: 30 }
+                text: Enemy nears their objective
+              - roll: { min: 31, max: 45 }
+                text: Objective in jeopardy
+              - roll: { min: 46, max: 55 }
+                text: Foe readies decisive action
+              - roll: { min: 56, max: 65 }
+                text: Others targeted
+              - roll: { min: 66, max: 75 }
+                text: Escape route threatened
+              - roll: { min: 76, max: 85 }
+                text: Rising environmental threat
+              - roll: { min: 86, max: 90 }
+                text: Signs of a greater enemy
+              - roll: { min: 91, max: 95 }
+                text: Enemy transforming
+              - roll: { min: 96, max: 100 }
+                text: Dreadful power gathers
+          encounter_a_peril:
+            name: Encounter a Peril
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Reinforcements appear
+              - roll: { min: 16, max: 30 }
+                text: Enemy seizes an objective
+              - roll: { min: 31, max: 45 }
+                text: Someone else in peril
+              - roll: { min: 46, max: 55 }
+                text: Enemy seeks new objective
+              - roll: { min: 56, max: 65 }
+                text: Objective falls out of reach
+              - roll: { min: 66, max: 75 }
+                text: Powerful foe joins the fight
+              - roll: { min: 76, max: 85 }
+                text: Foe issues a challenge
+              - roll: { min: 86, max: 90 }
+                text: Foe takes a new form
+              - roll: { min: 91, max: 95 }
+                text: Ruinous weapon revealed
+              - roll: { min: 96, max: 100 }
+                text: Dead rise again
+          trigger_a_crisis:
+            name: Trigger a Crisis
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Enemy claims major victory
+              - roll: { min: 16, max: 30 }
+                text: It was all a diversion
+              - roll: { min: 31, max: 45 }
+                text: Reputation sullied
+              - roll: { min: 46, max: 55 }
+                text: Others suffer a cost
+              - roll: { min: 56, max: 65 }
+                text: Marked for vengeance
+              - roll: { min: 66, max: 75 }
+                text: Devastating betrayal
+              - roll: { min: 76, max: 85 }
+                text: Someone pulling the strings
+              - roll: { min: 86, max: 90 }
+                text: Larger conflict ignited
+              - roll: { min: 91, max: 95 }
+                text: Enemy reveals true nature
+              - roll: { min: 96, max: 100 }
+                text: Disastrous force unleashed
+        collections:
+          mark_an_impact:
+            name: Mark an Impact
+            type: oracle_collection
+            oracle_type: tables
+            _source:
+              <<: *Source
+            contents:
+              health_impact:
+                name: Health Impact
+                type: oracle_rollable
+                oracle_type: table_text
+                dice: 1d10
+                _source:
+                  <<: *Source
+                rows:
+                  - roll: { min: 1, max: 3 }
+                    text: Mounting fatigue
+                  - roll: { min: 4, max: 5 }
+                    text: Stress and strains
+                  - roll: { min: 6, max: 7 }
+                    text: Bloody injury
+                  - roll: { min: 8, max: 8 }
+                    text: Crushing impact
+                  - roll: { min: 9, max: 9 }
+                    text: Knocked senseless
+                  - roll: { min: 10, max: 10 }
+                    text: Toxin or corruption
+              spirit_impact:
+                name: Spirit Impact
+                type: oracle_rollable
+                oracle_type: table_text
+                dice: 1d10
+                _source:
+                  <<: *Source
+                rows:
+                  - roll: { min: 1, max: 3 }
+                    text: Rattled senses
+                  - roll: { min: 4, max: 5 }
+                    text: Losing hope
+                  - roll: { min: 6, max: 7 }
+                    text: Rising panic
+                  - roll: { min: 8, max: 8 }
+                    text: Provoked to anger
+                  - roll: { min: 9, max: 9 }
+                    text: Bloody regret
+                  - roll: { min: 10, max: 10 }
+                    text: Harrowing sight
+              supply_impact:
+                name: Supply Impact
+                type: oracle_rollable
+                oracle_type: table_text
+                dice: 1d10
+                _source:
+                  <<: *Source
+                rows:
+                  - roll: { min: 1, max: 3 }
+                    text: Weapon damaged
+                  - roll: { min: 4, max: 5 }
+                    text: Armor or shield battered
+                  - roll: { min: 6, max: 7 }
+                    text: Depleted resource
+                  - roll: { min: 8, max: 8 }
+                    text: Gear lost or sacrificed
+                  - roll: { min: 9, max: 9 }
+                    text: Weapon lost or destroyed
+                  - roll: { min: 10, max: 10 }
+                    text: Item cursed or corrupted

@@ -3,12 +3,12 @@ datasworn_version: "0.1.0"
 type: expansion
 ruleset: classic
 <<: &Source
-  title: 'Ironsworn: Legacies - Playtest 1A'
+  title: 'Ironsworn: Legacies - Playtest 1B'
   authors:
     - name: Shawn Tomkin
   license: null
   url: https://ironswornrpg.com
-  date: 2026-06-05
+  date: 2026-06-10
 assets:
   impacts:
     type: asset_collection
@@ -25,12 +25,12 @@ assets:
         abilities: []
         controls:
           locked:
-            max: 4
+            max: 3
             value: 0
             field_type: condition_meter
             label: Locked
           minor:
-            max: 4
+            max: 3
             value: 0
             field_type: condition_meter
             label: Harmed
@@ -59,12 +59,12 @@ assets:
         abilities: []
         controls:
           locked:
-            max: 4
+            max: 3
             value: 0
             field_type: condition_meter
             label: Locked
           minor:
-            max: 4
+            max: 3
             value: 0
             field_type: condition_meter
             label: Stressed
@@ -93,12 +93,12 @@ assets:
         abilities: []
         controls:
           locked:
-            max: 4
+            max: 3
             value: 0
             field_type: condition_meter
             label: Locked
           minor:
-            max: 4
+            max: 3
             value: 0
             field_type: condition_meter
             label: Rationed

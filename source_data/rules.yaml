@@ -2,12 +2,12 @@ _id: legacies
 datasworn_version: "0.1.0"
 type: expansion
 ruleset: classic
-title: 'Ironsworn: Legacies - Playtest 1A'
+title: 'Ironsworn: Legacies - Playtest 1B'
 authors:
   - name: Shawn Tomkin
 license: null
 url: https://ironswornrpg.com
-date: 2026-06-05
+date: 2026-06-10
 rules:
   condition_meters:
     boons:

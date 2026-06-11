@@ -3,12 +3,12 @@ datasworn_version: "0.1.0"
 type: expansion
 ruleset: classic
 <<: &Source
-  title: 'Ironsworn: Legacies - Playtest 1A'
+  title: 'Ironsworn: Legacies - Playtest 1B'
   authors:
     - name: Shawn Tomkin
   license: null
   url: https://ironswornrpg.com
-  date: 2026-06-05
+  date: 2026-06-10
 assets:
   resources:
     type: asset_collection
@@ -39,11 +39,11 @@ assets:
           - name: Effective
             text: When you pursue a new challenge objective with the direct aid of the resource, reduce the rank by one step.
           - name: Fated
-            text: Before an objective roll, decide if you commit the resource. If you do, reroll any dice and lose the resource.
+            text: Before you roll to finish a challenge, decide if you commit the resource. If you do, reroll any dice and lose the resource.
           - name: Protective
             text: When you [Take Action](datasworn:move:legacies/action/take_action), you can improve the result by one step (miss to weak hit, or weak hit to strong hit). If you do, mark a resource impact.
           - name: Resilient
-            text: Impacts on this resource are unlocked. They can mend as standard minor impacts, but at a cost (1 boon per impact).
+            text: Impacts on this resource are unlocked. They can mend as standard minor impacts, but at a cost (2 boons per impact).
           - name: Restorative
             text: Mend two minor impacts on another target in exchange for marking an impact on this resource.
           - name: Special
@@ -77,11 +77,11 @@ assets:
           - name: Effective
             text: When you pursue a new challenge objective with the direct aid of the resource, reduce the rank by one step.
           - name: Fated
-            text: Before an objective roll, decide if you commit the resource. If you do, reroll any dice and lose the resource.
+            text: Before you roll to finish a challenge, decide if you commit the resource. If you do, reroll any dice and lose the resource.
           - name: Protective
             text: When you [Take Action](datasworn:move:legacies/action/take_action), you can improve the result by one step (miss to weak hit, or weak hit to strong hit). If you do, mark a resource impact.
           - name: Resilient
-            text: Impacts on this resource are unlocked. They can mend as standard minor impacts, but at a cost (1 boon per impact).
+            text: Impacts on this resource are unlocked. They can mend as standard minor impacts, but at a cost (2 boons per impact).
           - name: Restorative
             text: Mend two minor impacts on another target in exchange for marking an impact on this resource.
           - name: Special
@@ -115,11 +115,11 @@ assets:
           - name: Effective
             text: When you pursue a new challenge objective with the direct aid of the resource, reduce the rank by one step.
           - name: Fated
-            text: Before an objective roll, decide if you commit the resource. If you do, reroll any dice and lose the resource.
+            text: Before you roll to finish a challenge, decide if you commit the resource. If you do, reroll any dice and lose the resource.
           - name: Protective
             text: When you [Take Action](datasworn:move:legacies/action/take_action), you can improve the result by one step (miss to weak hit, or weak hit to strong hit). If you do, mark a resource impact.
           - name: Resilient
-            text: Impacts on this resource are unlocked. They can mend as standard minor impacts, but at a cost (1 boon per impact).
+            text: Impacts on this resource are unlocked. They can mend as standard minor impacts, but at a cost (2 boons per impact).
           - name: Restorative
             text: Mend two minor impacts on another target in exchange for marking an impact on this resource.
           - name: Special
@@ -153,11 +153,11 @@ assets:
           - name: Effective
             text: When you pursue a new challenge objective with the direct aid of the resource, reduce the rank by one step.
           - name: Fated
-            text: Before an objective roll, decide if you commit the resource. If you do, reroll any dice and lose the resource.
+            text: Before you roll to finish a challenge, decide if you commit the resource. If you do, reroll any dice and lose the resource.
           - name: Protective
             text: When you [Take Action](datasworn:move:legacies/action/take_action), you can improve the result by one step (miss to weak hit, or weak hit to strong hit). If you do, mark a resource impact.
           - name: Resilient
-            text: Impacts on this resource are unlocked. They can mend as standard minor impacts, but at a cost (1 boon per impact).
+            text: Impacts on this resource are unlocked. They can mend as standard minor impacts, but at a cost (2 boons per impact).
           - name: Restorative
             text: Mend two minor impacts on another target in exchange for marking an impact on this resource.
           - name: Special

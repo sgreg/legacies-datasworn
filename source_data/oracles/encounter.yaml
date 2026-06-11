@@ -1,0 +1,228 @@
+_id: legacies
+datasworn_version: "0.1.0"
+type: expansion
+ruleset: classic
+oracles:
+  encounter:
+    _source:
+      <<: &Source
+        title: 'Ironsworn: Legacies - Playtest 1B'
+        authors:
+          - name: Shawn Tomkin
+        license: null
+        url: https://ironswornrpg.com
+        date: 2026-06-10
+    name: Encounter Codex
+    type: oracle_collection
+    oracle_type: tables
+    collections:
+      undying:
+        name: Undying
+        type: oracle_collection
+        oracle_type: tables
+        _source:
+          <<: *Source
+        contents:
+          disposition:
+            name: Undying Disposition
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 5 }
+                text: Benevolent
+              - roll: { min: 6, max: 10 }
+                text: Indifferent
+              - roll: { min: 11, max: 15 }
+                text: Curious
+              - roll: { min: 16, max: 20 }
+                text: Mischievous
+              - roll: { min: 21, max: 30 }
+                text: Needful
+              - roll: { min: 31, max: 40 }
+                text: Wary
+              - roll: { min: 41, max: 55 }
+                text: Tormented
+              - roll: { min: 56, max: 70 }
+                text: Hostile
+              - roll: { min: 71, max: 85 }
+                text: Hungry
+              - roll: { min: 86, max: 100 }
+                text: Murderous
+          form:
+            name: Undying Form
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 10 }
+                text: '**Ghostly**: Insubstantial presence; whispering voice'
+              - roll: { min: 11, max: 20 }
+                text: '**Corpselike**: Pale flesh; grisly scars'
+              - roll: { min: 21, max: 30 }
+                text: '**Rotting**: Decaying flesh; putrid stench'
+              - roll: { min: 31, max: 40 }
+                text: '**Skeletal**: Stripped of flesh; hollow gaze'
+              - roll: { min: 41, max: 50 }
+                text: '**Blighted**: Corrupted flesh; unnatural growths'
+              - roll: { min: 51, max: 60 }
+                text: '**Drowned**: Sodden flesh; trail of fetid muck'
+              - roll: { min: 61, max: 70 }
+                text: '**Burned**: Smoldering flesh; haze of ash'
+              - roll: { min: 71, max: 80 }
+                text: '**Frozen**: Frost-covered flesh; deathly chill'
+              - roll: { min: 81, max: 85 }
+                text: '**Shrouded**: Bound in grave wrappings; masked visage'
+              - roll: { min: 86, max: 90 }
+                text: '**Armored**: Soul-animated armor; relentless clatter'
+              - roll: { min: 91, max: 95 }
+                text: '**Fused**: Merged corpses; writhing mass'
+              - roll: { min: 96, max: 100 }
+                text: '**Lifelike**: Alluring form; sense of wrongness'
+          cohort:
+            name: Undying Cohort
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 60 }
+                text: '**Solitary**: A lone soul denied its final rest'
+              - roll: { min: 61, max: 70 }
+                text: '**Pair**: Two entities sharing an eternal bond'
+              - roll: { min: 71, max: 85 }
+                text: '**Brood**: Several entities drawn by a common fate'
+              - roll: { min: 86, max: 95 }
+                text: '**Court**: A powerful being attended by lesser entities'
+              - roll: { min: 96, max: 99 }
+                text: '**Mob**: A large gathering of cursed souls'
+              - roll: { min: 100, max: 100 }
+                text: '**Horde**: An overwhelming tide of restless dead'
+          need:
+            name: Undying Need
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 5 }
+                text: Destroy the living
+              - roll: { min: 6, max: 10 }
+                text: Fulfill a vow
+              - roll: { min: 11, max: 15 }
+                text: Guard a location
+              - roll: { min: 16, max: 20 }
+                text: Protect a relic
+              - roll: { min: 21, max: 25 }
+                text: Feed an insatiable hunger
+              - roll: { min: 26, max: 30 }
+                text: Inflict decay or corruption upon the world
+              - roll: { min: 31, max: 35 }
+                text: Serve a greater power
+              - roll: { min: 36, max: 40 }
+                text: Perform an unending duty
+              - roll: { min: 41, max: 44 }
+                text: Make others suffer its fate
+              - roll: { min: 45, max: 48 }
+                text: Escape their cursed existence
+              - roll: { min: 49, max: 52 }
+                text: Discover their forgotten identity
+              - roll: { min: 53, max: 56 }
+                text: Exact vengeance
+              - roll: { min: 57, max: 60 }
+                text: Pursue their victims without rest
+              - roll: { min: 61, max: 64 }
+                text: Wander restlessly
+              - roll: { min: 65, max: 67 }
+                text: Reenact their final moments
+              - roll: { min: 68, max: 70 }
+                text: Keep someone from harm
+              - roll: { min: 71, max: 73 }
+                text: Reunite with a loved one
+              - roll: { min: 74, max: 76 }
+                text: Gather forbidden knowledge
+              - roll: { min: 77, max: 79 }
+                text: Inflict the method of their death upon others
+              - roll: { min: 80, max: 82 }
+                text: "Punish the descendent\u2019s of their enemy"
+              - roll: { min: 83, max: 85 }
+                text: Resist a controlling power
+              - roll: { min: 86, max: 88 }
+                text: Bring about a prophecy
+              - roll: { min: 89, max: 91 }
+                text: Prevent a prophecy
+              - roll: { min: 92, max: 94 }
+                text: Gather a horde of undead
+              - roll: { min: 95, max: 97 }
+                text: Gather components of a complex ritual
+              - roll: { min: 98, max: 100 }
+                text: Restore themselves to life
+          tactics:
+            name: Undying Tactics
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 4 }
+                text: Lay a deathly touch
+              - roll: { min: 5, max: 8 }
+                text: Unleash a hideous wail
+              - roll: { min: 9, max: 12 }
+                text: Reveal a horrifying visage
+              - roll: { min: 13, max: 16 }
+                text: Strike with invisible force
+              - roll: { min: 17, max: 20 }
+                text: Wield the weapons it bore in life
+              - roll: { min: 21, max: 24 }
+                text: Emanate a bitter cold
+              - roll: { min: 25, max: 28 }
+                text: Fix with a horrifying gaze
+              - roll: { min: 29, max: 32 }
+                text: Feed upon fear
+              - roll: { min: 33, max: 36 }
+                text: Exude the stench of death
+              - roll: { min: 37, max: 40 }
+                text: Move unhindered
+              - roll: { min: 41, max: 43 }
+                text: Consume the warmth of the living
+              - roll: { min: 44, max: 46 }
+                text: Command lesser creatures
+              - roll: { min: 47, max: 49 }
+                text: Lash out with an invisible force
+              - roll: { min: 50, max: 52 }
+                text: Bite and claw with savage hunger
+              - roll: { min: 53, max: 55 }
+                text: Shroud all in darkness
+              - roll: { min: 56, max: 58 }
+                text: Wrap in crushing embrace
+              - roll: { min: 59, max: 61 }
+                text: Disappear into the shadows
+              - roll: { min: 62, max: 64 }
+                text: Call other dead from their rest
+              - roll: { min: 65, max: 67 }
+                text: Tear through armor and shields
+              - roll: { min: 68, max: 70 }
+                text: Foretell a terrible fate
+              - roll: { min: 71, max: 73 }
+                text: Assume the guise of a loved one
+              - roll: { min: 74, max: 76 }
+                text: Seize a cherished object
+              - roll: { min: 77, max: 79 }
+                text: Spread blight and decay
+              - roll: { min: 80, max: 82 }
+                text: Whisper harrowing truths
+              - roll: { min: 83, max: 85 }
+                text: Take on an alluring form
+              - roll: { min: 86, max: 88 }
+                text: Sing a terrible dirge
+              - roll: { min: 89, max: 91 }
+                text: Taunt with past fears and regrets
+              - roll: { min: 92, max: 94 }
+                text: Place a dreadful curse upon the living
+              - roll: { min: 95, max: 97 }
+                text: Manifest dreadful visions
+              - roll: { min: 98, max: 100 }
+                text: Reveal the realms beyond death

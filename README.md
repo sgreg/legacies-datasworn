@@ -28,6 +28,7 @@ Containing very basic implementation of core procedures and items
   - Journey
   - Fight
   - Undying Encounters
+  - preliminary Action+Theme
 
 No mechanics for advantages / misfortunes, my suggestion is to use out-of-character comments for that.
 

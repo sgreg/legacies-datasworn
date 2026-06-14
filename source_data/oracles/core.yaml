@@ -1,0 +1,234 @@
+_id: legacies
+datasworn_version: "0.1.0"
+type: expansion
+ruleset: classic
+oracles:
+  core:
+    _source:
+      <<: &Source
+        title: 'Ironsworn: Legacies - Playtest 1B'
+        authors:
+          - name: Shawn Tomkin
+        license: null
+        url: https://ironswornrpg.com
+        date: 2026-06-10
+    name: Core Oracles
+    type: oracle_collection
+    oracle_type: tables
+    contents:
+      action:
+        name: Action
+        type: oracle_rollable
+        oracle_type: table_text
+        dice: 1d200
+        _source:
+          <<: *Source
+        rows:
+          - roll: { min: 1, max: 4 }
+            text: Transform
+          - roll: { min: 5, max: 8 }
+            text: Change
+          - roll: { min: 9, max: 12 }
+            text: ' Create'
+          - roll: { min: 13, max: 16 }
+            text: Forsake
+          - roll: { min: 17, max: 20 }
+            text: Break
+          - roll: { min: 21, max: 24 }
+            text: Deliver
+          - roll: { min: 25, max: 28 }
+            text: Reveal
+          - roll: { min: 29, max: 32 }
+            text: Restore
+          - roll: { min: 33, max: 36 }
+            text: Aid
+          - roll: { min: 37, max: 40 }
+            text: Hunt
+          - roll: { min: 41, max: 44 }
+            text: Summon
+          - roll: { min: 45, max: 48 }
+            text: Abandon
+          - roll: { min: 49, max: 52 }
+            text: Command
+          - roll: { min: 53, max: 56 }
+            text: Seize
+          - roll: { min: 57, max: 60 }
+            text: Gather
+          - roll: { min: 61, max: 64 }
+            text: Follow
+          - roll: { min: 65, max: 68 }
+            text: Hide
+          - roll: { min: 69, max: 72 }
+            text: Deceive
+          - roll: { min: 73, max: 76 }
+            text: Betray
+          - roll: { min: 77, max: 80 }
+            text: Steal
+          - roll: { min: 81, max: 84 }
+            text: Trade
+          - roll: { min: 85, max: 88 }
+            text: Banish
+          - roll: { min: 89, max: 92 }
+            text: Sactifice
+          - roll: { min: 93, max: 96 }
+            text: Control
+          - roll: { min: 97, max: 100 }
+            text: Defeat
+          - roll: { min: 101, max: 104 }
+            text: Investigate
+          - roll: { min: 105, max: 108 }
+            text: Explore
+          - roll: { min: 109, max: 112 }
+            text: Discover
+          - roll: { min: 113, max: 116 }
+            text: Oppose
+          - roll: { min: 117, max: 120 }
+            text: Preserve
+          - roll: { min: 121, max: 124 }
+            text: Avenge
+          - roll: { min: 125, max: 128 }
+            text: Surrender
+          - roll: { min: 129, max: 132 }
+            text: Demand
+          - roll: { min: 133, max: 136 }
+            text: Destroy
+          - roll: { min: 137, max: 140 }
+            text: Resist
+          - roll: { min: 141, max: 144 }
+            text: Threaten
+          - roll: { min: 145, max: 148 }
+            text: Protect
+          - roll: { min: 149, max: 152 }
+            text: Heal
+          - roll: { min: 153, max: 156 }
+            text: Avoid
+          - roll: { min: 157, max: 160 }
+            text: Attack
+          - roll: { min: 161, max: 164 }
+            text: Share
+          - roll: { min: 165, max: 168 }
+            text: Learn
+          - roll: { min: 169, max: 172 }
+            text: Escape
+          - roll: { min: 173, max: 176 }
+            text: Pursue
+          - roll: { min: 177, max: 180 }
+            text: Tempt
+          - roll: { min: 181, max: 184 }
+            text: Defy
+          - roll: { min: 185, max: 188 }
+            text: Survive
+          - roll: { min: 189, max: 192 }
+            text: Corrupt
+          - roll: { min: 193, max: 196 }
+            text: Challenge
+          - roll: { min: 197, max: 200 }
+            text: Await
+      theme:
+        name: Theme
+        type: oracle_rollable
+        oracle_type: table_text
+        dice: 1d200
+        _source:
+          <<: *Source
+        rows:
+          - roll: { min: 1, max: 4 }
+            text: Life
+          - roll: { min: 5, max: 8 }
+            text: Community
+          - roll: { min: 9, max: 12 }
+            text: ' Freedom'
+          - roll: { min: 13, max: 16 }
+            text: War
+          - roll: { min: 17, max: 20 }
+            text: Peace
+          - roll: { min: 21, max: 24 }
+            text: Safety
+          - roll: { min: 25, max: 28 }
+            text: Hope
+          - roll: { min: 29, max: 32 }
+            text: Secret
+          - roll: { min: 33, max: 36 }
+            text: Enemy
+          - roll: { min: 37, max: 40 }
+            text: Alliance
+          - roll: { min: 41, max: 44 }
+            text: Quest
+          - roll: { min: 45, max: 48 }
+            text: Haven
+          - roll: { min: 49, max: 52 }
+            text: Family
+          - roll: { min: 53, max: 56 }
+            text: Belief
+          - roll: { min: 57, max: 60 }
+            text: Knowledge
+          - roll: { min: 61, max: 64 }
+            text: Leader
+          - roll: { min: 65, max: 68 }
+            text: Home
+          - roll: { min: 69, max: 72 }
+            text: Defense
+          - roll: { min: 73, max: 76 }
+            text: Honor
+          - roll: { min: 77, max: 80 }
+            text: Relic
+          - roll: { min: 81, max: 84 }
+            text: Resource
+          - roll: { min: 85, max: 88 }
+            text: Legend
+          - roll: { min: 89, max: 92 }
+            text: Time
+          - roll: { min: 93, max: 96 }
+            text: Hate
+          - roll: { min: 97, max: 100 }
+            text: Person
+          - roll: { min: 101, max: 104 }
+            text: Power
+          - roll: { min: 105, max: 108 }
+            text: Land
+          - roll: { min: 109, max: 112 }
+            text: Passage
+          - roll: { min: 113, max: 116 }
+            text: Vow
+          - roll: { min: 117, max: 120 }
+            text: Courage
+          - roll: { min: 121, max: 124 }
+            text: Nature
+          - roll: { min: 125, max: 128 }
+            text: Duty
+          - roll: { min: 129, max: 132 }
+            text: Reputation
+          - roll: { min: 133, max: 136 }
+            text: Love
+          - roll: { min: 137, max: 140 }
+            text: Truth
+          - roll: { min: 141, max: 144 }
+            text: Wealth
+          - roll: { min: 145, max: 148 }
+            text: Weapon
+          - roll: { min: 149, max: 152 }
+            text: Bond
+          - roll: { min: 153, max: 156 }
+            text: History
+          - roll: { min: 157, max: 160 }
+            text: Creature
+          - roll: { min: 161, max: 164 }
+            text: Message
+          - roll: { min: 165, max: 168 }
+            text: Faction
+          - roll: { min: 169, max: 172 }
+            text: Death
+          - roll: { min: 173, max: 176 }
+            text: Greed
+          - roll: { min: 177, max: 180 }
+            text: Quest
+          - roll: { min: 181, max: 184 }
+            text: Captivity
+          - roll: { min: 185, max: 188 }
+            text: Journey
+          - roll: { min: 189, max: 192 }
+            text: Fate
+          - roll: { min: 193, max: 196 }
+            text: Mysticism
+          - roll: { min: 197, max: 200 }
+            text: Curse

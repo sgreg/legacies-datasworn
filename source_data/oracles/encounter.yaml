@@ -11,7 +11,7 @@ oracles:
           - name: Shawn Tomkin
         license: null
         url: https://ironswornrpg.com
-        date: 2026-06-10
+        date: 2026-06-20
     name: Encounter Codex
     type: oracle_collection
     oracle_type: tables
@@ -33,15 +33,15 @@ oracles:
               - roll: { min: 1, max: 5 }
                 text: Benevolent
               - roll: { min: 6, max: 10 }
-                text: Indifferent
-              - roll: { min: 11, max: 15 }
                 text: Curious
-              - roll: { min: 16, max: 20 }
+              - roll: { min: 11, max: 15 }
                 text: Mischievous
+              - roll: { min: 16, max: 20 }
+                text: Indifferent
               - roll: { min: 21, max: 30 }
-                text: Needful
-              - roll: { min: 31, max: 40 }
                 text: Wary
+              - roll: { min: 31, max: 40 }
+                text: Needful
               - roll: { min: 41, max: 55 }
                 text: Tormented
               - roll: { min: 56, max: 70 }
@@ -58,7 +58,7 @@ oracles:
               <<: *Source
             rows:
               - roll: { min: 1, max: 10 }
-                text: '**Ghostly**: Insubstantial presence; whispering voice'
+                text: '**Ghostly**: Spectral presence; whispering voice'
               - roll: { min: 11, max: 20 }
                 text: '**Corpselike**: Pale flesh; grisly scars'
               - roll: { min: 21, max: 30 }
@@ -74,9 +74,9 @@ oracles:
               - roll: { min: 71, max: 80 }
                 text: '**Frozen**: Frost-covered flesh; deathly chill'
               - roll: { min: 81, max: 85 }
-                text: '**Shrouded**: Bound in grave wrappings; masked visage'
+                text: '**Shrouded**: Grave wrappings; masked visage'
               - roll: { min: 86, max: 90 }
-                text: '**Armored**: Soul-animated armor; relentless clatter'
+                text: '**Armored**: Animated armor; relentless clatter'
               - roll: { min: 91, max: 95 }
                 text: '**Fused**: Merged corpses; writhing mass'
               - roll: { min: 96, max: 100 }
@@ -93,7 +93,7 @@ oracles:
               - roll: { min: 61, max: 70 }
                 text: '**Pair**: Two entities sharing an eternal bond'
               - roll: { min: 71, max: 85 }
-                text: '**Brood**: Several entities drawn by a common fate'
+                text: '**Gathering**: Several entities drawn by a common fate'
               - roll: { min: 86, max: 95 }
                 text: '**Court**: A powerful being attended by lesser entities'
               - roll: { min: 96, max: 99 }
@@ -146,7 +146,7 @@ oracles:
               - roll: { min: 77, max: 79 }
                 text: Inflict the method of their death upon others
               - roll: { min: 80, max: 82 }
-                text: "Punish the descendent\u2019s of their enemy"
+                text: Punish the descendant's of their enemy
               - roll: { min: 83, max: 85 }
                 text: Resist a controlling power
               - roll: { min: 86, max: 88 }

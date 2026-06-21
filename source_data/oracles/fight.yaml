@@ -11,7 +11,7 @@ oracles:
           - name: Shawn Tomkin
         license: null
         url: https://ironswornrpg.com
-        date: 2026-06-10
+        date: 2026-06-20
     name: Fight Codex
     type: oracle_collection
     oracle_type: tables
@@ -22,6 +22,7 @@ oracles:
         oracle_type: table_text
         _source:
           <<: *Source
+        summary: Use this table to inspire aspects of the surroundings. These elements should have an impact on characters in the scene—the obstacles they must overcome and the environmental features they use to their advantage. In a dynamic fight, return to this table to reveal how the surroundings and terrain changes as the combatants move to a new area.
         rows:
           - roll: { min: 1, max: 5 }
             text: '**High ground**: Mound, outcropping, climbable structure'
@@ -70,6 +71,7 @@ oracles:
         dice: 1d200
         _source:
           <<: *Source
+        summary: Use this table along with the [Fight Target](datasworn:oracle_rollable:legacies/fight/target) table to spark occurrences or enemy tactics or in a fight. Roll once for method and again for target, choosing the most interesting options from those provided. Or just roll once and pick from that row. Combine the results into a two-word prompt and interpret its meaning.
         rows:
           - roll: { min: 1, max: 5 }
             text: Aid
@@ -158,6 +160,7 @@ oracles:
         dice: 1d200
         _source:
           <<: *Source
+        summary: Use this table along with the [Fight Method](datasworn:oracle_rollable:legacies/fight/method) table to spark occurrences or enemy tactics or in a fight. Roll once for method and again for target, choosing the most interesting options from those provided. Or just roll once and pick from that row. Combine the results into a two-word prompt and interpret its meaning.
         rows:
           - roll: { min: 1, max: 5 }
             text: Ally
@@ -363,17 +366,17 @@ oracles:
               <<: *Source
             rows:
               - roll: { min: 1, max: 3 }
-                text: "[Personal (Health)](datasworn:oracle_rollable:legacies/fight/misfortunes/mark_an_impact/health_impact)"
+                text: "[Personal (health)](datasworn:oracle_rollable:legacies/fight/misfortunes/mark_an_impact/health_impact)"
                 oracle_rolls:
                   - oracle: oracle_rollable:legacies/fight/misfortunes/mark_an_impact/health_impact
                     auto: true
               - roll: { min: 4, max: 5 }
-                text: "[Personal (Spirit)](datasworn:oracle_rollable:legacies/fight/misfortunes/mark_an_impact/spirit_impact)"
+                text: "[Personal (spirit)](datasworn:oracle_rollable:legacies/fight/misfortunes/mark_an_impact/spirit_impact)"
                 oracle_rolls:
                   - oracle: oracle_rollable:legacies/fight/misfortunes/mark_an_impact/spirit_impact
                     auto: true
               - roll: { min: 6, max: 8 }
-                text: "[Personal (Supply)](datasworn:oracle_rollable:legacies/fight/misfortunes/mark_an_impact/supply_impact)"
+                text: "[Personal (supply)](datasworn:oracle_rollable:legacies/fight/misfortunes/mark_an_impact/supply_impact)"
                 oracle_rolls:
                   - oracle: oracle_rollable:legacies/fight/misfortunes/mark_an_impact/supply_impact
                     auto: true

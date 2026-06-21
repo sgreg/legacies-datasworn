@@ -8,7 +8,7 @@ ruleset: classic
     - name: Shawn Tomkin
   license: null
   url: https://ironswornrpg.com
-  date: 2026-06-10
+  date: 2026-06-20
 moves:
   action:
     name: Action Moves
@@ -67,7 +67,7 @@ moves:
 
           On a __strong hit__, it's a complete success.
             * Take +1 advantage.
-            * If position is favored, take +1 advantage and gain +1 momentum.
+            * If position is favored, take +1 advantage and gain momentum.
             * If you tempted fate, take +1 advantage.
             * Gain position, if not already favored.
 
@@ -79,19 +79,19 @@ moves:
 
           On a __miss__, it's an undone success or failure.
             * Take +1 misfortune
-            * If position is desperate, take +1 misfortune and lose -1 momentum.
+            * If position is desperate, take +1 misfortune and lose momentum.
             * If you tempted fate, take +1 misfortune.
             * Lose position, if not already desperate.
 
           Based on your intent, risk, and method, [Gain Advantage](datasworn:move:legacies/action/gain_advantage) and [Suffer Misfortune](datasworn:move:legacies/action/suffer_misfortune) to assign all effects. Envision the result.
 
-          When you roll a match on the challenge dice, assign advantages and misfortunes to surprising interpretations or effects.
+          When you roll a match on the challenge dice, assign advantages and misfortunes to unexpected interpretations or effects.
         outcomes:
           strong_hit:
             text: |-
               On a __strong hit__, it's a complete success.
                 * Take +1 advantage.
-                * If position is favored, take +1 advantage and gain +1 momentum.
+                * If position is favored, take +1 advantage and gain momentum.
                 * If you tempted fate, take +1 advantage.
                 * Gain position, if not already favored.
           weak_hit:
@@ -105,7 +105,7 @@ moves:
             text: |-
               On a __miss__, it's an undone success or failure.
                 * Take +1 misfortune
-                * If position is desperate, take +1 misfortune and lose -1 momentum.
+                * If position is desperate, take +1 misfortune and lose momentum.
                 * If you tempted fate, take +1 misfortune.
                 * Lose position, if not already desperate.
       gain_advantage:
@@ -122,10 +122,10 @@ moves:
           Advantage Effect | Cost
           ---- | ----
           **Mark challenge progress** | ●
-          **Gain 1 momentum** | ●
+          **Gain momentum** | ●
           **Overcome a setback** | ●
           **Mend a minor impact** | ●●
-          **Find an opportunity**: A promising occurrence or insight offers leverage. Once only, if you [Take Action](datasworn:move:legacies/action/take_action) to act on the opportunity, you are favored and add +1. | ●●
+          **Find an opportunity**: A promising occurrence or insight offers leverage. Once only, if you [Take Action](datasworn:move:legacies/action/take_action) to act on the opportunity, set your position to favored and add +1. | ●●
           **Make a discovery**: A fateful revelation, sighting, or encounter advances your legacy. Once only, if you act on, investigate, or leverage the discovery, earn 2 boons. | ●●●
       suffer_misfortune:
         name: Suffer Misfortune
@@ -141,7 +141,7 @@ moves:
           Misfortune Effect | Cost
           ---- | ----
           **Mark an impact** | ●
-          **Lose 1 momentum** | ●
+          **Lose momentum** | ●
           **Face a setback**: A complication blocks your progress To move forward, [Take Action](datasworn:move:legacies/action/take_action) and overcome a setback. | ●
           **Increase tension**: Danger looms. Add or mark a four-segment tension timer (mark two segments on a match). Once you mark the last segment, encounter a peril. | ●
           **Encounter a peril**: The situation worsens. [Take on a Challenge](datasworn:move:legacies/challenge/take_on_a_challenge), abandon an existing challenge, or both. | ●●
@@ -173,11 +173,11 @@ moves:
         type: move
         roll_type: no_roll
         trigger:
-          text: When you overcome a crucial challenge or gain success in some other meaningful aspect of the quest__...
+          text: When you complete a crucial challenge or gain success in some other meaningful aspect of the quest__...
         _source:
           <<: *Source
         text: |-
-          When __you overcome a crucial challenge or gain success in some other meaningful aspect of the quest__, mark progress per the quest rank.
+          When __you complete a crucial challenge or gain success in some other meaningful aspect of the quest__, mark progress per the quest rank.
       resolve_a_quest:
         name: Resolve a Quest
         type: move
@@ -247,14 +247,14 @@ moves:
         tracks:
           category: Challenge
         trigger:
-          text: When the objective is in reach and you attempt a decisive finish for the challenge...
+          text: When the objective is in reach and you attempt a decisive finish...
           conditions:
             - roll_options:
                 - using: progress_track
         _source:
           <<: *Source
         text: |-
-          When __the objective is in reach and you attempt a decisive finish for the challenge__, test your progress score against the challenge dice.
+          When __the objective is in reach and you attempt a decisive finish__, test your progress score against the challenge dice.
 
           On a __strong hit__, you complete the challenge.
             * Take +1 advantage.
@@ -272,9 +272,10 @@ moves:
             * If position is desperate, take +2 misfortune and lose -1 momentum.
             * Lose position, if not already desperate.
 
-          When you complete a challenge, earn 1 boon. Earn additional boons for a completed challenge as follows:
-            * Demanding challenge: +1 boon for a formidable or extreme challenge, +2 for an epic challenge.
-            * Milestone challenge: +1 boon if the challenge is a quest milestone (no more than one milestone per situation).
+          Earn boons for a completed challenge as follows. If you abandoned or failed the challenge, take no reward.
+            * Base reward: 1 boon
+            * Demanding reward: +1 boon for a formidable or extreme challenge, +2 for an epic challenge.
+            * Milestone reward: +1 boon if the challenge is a quest milestone (no more than one milestone per situation).
         outcomes:
           strong_hit:
             text: |-
@@ -282,18 +283,20 @@ moves:
                 * Take +1 advantage.
                 * If position is favored, take +1 advantage and gain +1 momentum.
                 * Gain position, if not already favored.
-                * Earn 1 boon. Earn additional boons for a completed challenge as follows:
-                  * Demanding challenge: +1 boon for a formidable or extreme challenge, +2 for an epic challenge.
-                  * Milestone challenge: +1 boon if the challenge is a quest milestone (no more than one milestone per situation).
+                * Earn boons for a completed challenge as follows. If you abandoned or failed the challenge, take no reward.
+                  * Base reward: 1 boon
+                  * Demanding reward: +1 boon for a formidable or extreme challenge, +2 for an epic challenge.
+                  * Milestone reward: +1 boon if the challenge is a quest milestone (no more than one milestone per situation).
           weak_hit:
             text: |-
               On a __weak hit__, you complete the challenge at a cost.
                 * Take +1 misfortune.
                 * If position is pressured, take +1 misfortune.
                 * If position is desperate, take +2 misfortune.
-                * Earn 1 boon. Earn additional boons for a completed challenge as follows:
-                  * Demanding challenge: +1 boon for a formidable or extreme challenge, +2 for an epic challenge.
-                  * Milestone challenge: +1 boon if the challenge is a quest milestone (no more than one milestone per situation).
+                * Earn boons for a completed challenge as follows. If you abandoned or failed the challenge, take no reward.
+                  * Base reward: 1 boon
+                  * Demanding reward: +1 boon for a formidable or extreme challenge, +2 for an epic challenge.
+                  * Milestone reward: +1 boon if the challenge is a quest milestone (no more than one milestone per situation).
           miss:
             text: |-
               On a __miss__, the challenge fails.
@@ -323,7 +326,7 @@ moves:
           Perform the following steps:
 
           1. **Recover (optional)**
-            If you have the means to recover, envision how you regain readiness and do any of the following:
+            If you have the means, envision how you regain readiness and do any of the following:
               * Mend severe impacts: Spend 2 boons to mend each severe impact. If you recover at a haven, mend one severe impact at no cost.
               * Mend minor impacts: Automatically mend any minor impacts (must mend severe impacts of same category first).
               * Mend lasting impacts: Lock a minor impact of the same category, then mend the lasting impact.
@@ -334,7 +337,7 @@ moves:
             [Take Action](datasworn:move:legacies/action/take_action) to work on a single complex project. On a hit, the project is complete and you earn 1 boon. In addition, you may convert any advantages gained on this action to boons.
 
           3. **Explore an interlude (optional)**
-            If not in danger, envision a low-stakes interaction or situation during downtime. You may [Take Action](datasworn:move:legacies/action/take_action) to overcome momentary obstacles or gain minor advantages during an interlude. If you do, you are favored and never tempt fate. If the outcome of the interlude is positive from your character’s perspective, earn 1 boon.
+            If not in danger, give focus to a single low-stakes interaction or situation during downtime. You may [Take Action](datasworn:move:legacies/action/take_action) when facing a minor risk or obstacle during an interlude. If you do, set your position to favored and do not tempt fate. If the outcome of the interlude is meaningful from your character’s perspective, earn 1 boon.
 
           4. **Gather rewards**
             Earn 2 boons for each thriving haven. If an asset offers specific benefits when you Pass Time, take that reward.

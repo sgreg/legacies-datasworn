@@ -7,7 +7,7 @@ authors:
   - name: Shawn Tomkin
 license: null
 url: https://ironswornrpg.com
-date: 2026-06-10
+date: 2026-06-20
 rules:
   condition_meters:
     boons:
@@ -35,4 +35,4 @@ rules:
       min: -1
       value: 1
       description: |-
-        Positions, +1 favored, 0 pressured, -1 desperate
+        Positions, -1 desperate, 0 pressured, +1 favored

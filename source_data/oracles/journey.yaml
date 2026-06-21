@@ -11,7 +11,7 @@ oracles:
           - name: Shawn Tomkin
         license: null
         url: https://ironswornrpg.com
-        date: 2026-06-10
+        date: 2026-06-20
     name: Journey Codex
     type: oracle_collection
     oracle_type: tables
@@ -22,6 +22,7 @@ oracles:
         oracle_type: table_text
         _source:
           <<: *Source
+        summary: If you gather rumors about what lies ahead from locals or other travelers, use the table below for inspiration. Note the result and keep it in mind for potential sightings and encounters en route.
         rows:
           - roll: { min: 1, max: 5 }
             text: Forsaken settlement lies abandoned
@@ -63,12 +64,13 @@ oracles:
             text: Beguiling spirits lead travelers astray
           - roll: { min: 96, max: 100 }
             text: The dead walk this path
-      vignettes:
-        name: Journey Vignettes
+      moments:
+        name: Journey Moments
         type: oracle_rollable
         oracle_type: table_text
         _source:
           <<: *Source
+        summary: Give focus to occasional low-key moments of exploration or introspection by asking and answering questions about your character or their surroundings. For inspiration, use the table below.
         rows:
           - roll: { min: 1, max: 10 }
             text: What distant landmark catches your eye?
@@ -77,7 +79,7 @@ oracles:
           - roll: { min: 21, max: 30 }
             text: How does the landscape change?
           - roll: { min: 31, max: 40 }
-            text: What memory does this place bring to mind?
+            text: How does this place affect the interaction?
           - roll: { min: 41, max: 50 }
             text: What aspect of the environment is out of place?
           - roll: { min: 51, max: 60 }
@@ -97,6 +99,7 @@ oracles:
         dice: 1d200
         _source:
           <<: *Source
+        summary: Use this table along with the [Journey Focus](datasworn:oracle_rollable:legacies/journey/focus) table to spark a location, encounter, or event during a journey. Roll once for descriptor and again for focus, choosing the most interesting options from those provided. Or just roll once and pick from that row. Combine the results into a two-word prompt and interpret its meaning.
         rows:
           - roll: { min: 1, max: 7 }
             text: Abundant
@@ -165,6 +168,7 @@ oracles:
         dice: 1d200
         _source:
           <<: *Source
+        summary: Use this table along with the [Journey Descriptor](datasworn:oracle_rollable:legacies/journey/descriptor) table to spark a location, encounter, or event during a journey. Roll once for descriptor and again for focus, choosing the most interesting options from those provided. Or just roll once and pick from that row. Combine the results into a two-word prompt and interpret its meaning.
         rows:
           - roll: { min: 1, max: 7 }
             text: Water
@@ -226,8 +230,8 @@ oracles:
             text: Community
           - roll: { min: 195, max: 200 }
             text: Gathering
-      what_went_wrong:
-        name: What Went Wrong?
+      wayward:
+        name: Wayward Journey
         type: oracle_rollable
         oracle_type: table_text
         _source:
@@ -350,22 +354,22 @@ oracles:
               <<: *Source
             rows:
               - roll: { min: 1, max: 3 }
-                text: "[Personal (Health)](datasworn:oracle_rollable:legacies/journey/misfortunes/mark_an_impact/health_impact)"
+                text: "[Personal (health)](datasworn:oracle_rollable:legacies/journey/misfortunes/mark_an_impact/health_impact)"
                 oracle_rolls:
                   - oracle: oracle_rollable:legacies/journey/misfortunes/mark_an_impact/health_impact
                     auto: true
               - roll: { min: 4, max: 5 }
-                text: "[Personal (Spirit)](datasworn:oracle_rollable:legacies/journey/misfortunes/mark_an_impact/spirit_impact)"
+                text: "[Personal (spirit)](datasworn:oracle_rollable:legacies/journey/misfortunes/mark_an_impact/spirit_impact)"
                 oracle_rolls:
                   - oracle: oracle_rollable:legacies/journey/misfortunes/mark_an_impact/spirit_impact
                     auto: true
               - roll: { min: 6, max: 8 }
-                text: "[Personal (Supply)](datasworn:oracle_rollable:legacies/journey/misfortunes/mark_an_impact/supply_impact)"
+                text: "[Personal (supply)](datasworn:oracle_rollable:legacies/journey/misfortunes/mark_an_impact/supply_impact)"
                 oracle_rolls:
                   - oracle: oracle_rollable:legacies/journey/misfortunes/mark_an_impact/supply_impact
                     auto: true
               - roll: { min: 9, max: 10 }
-                text: Other (Asset or resource)
+                text: Other (asset or resource)
           lose_momentum:
             name: Lose Momentum
             type: oracle_rollable

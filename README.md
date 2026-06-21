@@ -1,6 +1,6 @@
 # Ironsworn: Legacies hackish Datasworn ruleset
 
-**State**: *Playtest Alpha 1B, 2026-06-10*
+**State**: *Playtest Alpha 1B, 2026-06-20*
 
 > [!NOTE] 
 > This is intended for Iron Vault (meaning that's what I've tested it with) and by no means claimed to be great and anything else than a quick, hackish way to have _some_ support for the Legacies playtest available.

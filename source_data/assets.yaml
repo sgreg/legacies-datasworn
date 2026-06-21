@@ -8,7 +8,7 @@ ruleset: classic
     - name: Shawn Tomkin
   license: null
   url: https://ironswornrpg.com
-  date: 2026-06-10
+  date: 2026-06-20
 assets:
   impacts:
     type: asset_collection

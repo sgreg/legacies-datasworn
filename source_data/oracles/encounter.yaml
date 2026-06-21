@@ -16,6 +16,264 @@ oracles:
     type: oracle_collection
     oracle_type: tables
     collections:
+      elder_beast:
+        name: Elder Beast
+        type: oracle_collection
+        oracle_type: tables
+        _source:
+          <<: *Source
+        contents:
+          disposition:
+            name: Elder Beast Disposition
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 5 }
+                text: Benevolent
+              - roll: { min: 6, max: 15 }
+                text: Watchful
+              - roll: { min: 16, max: 25 }
+                text: Distracted
+              - roll: { min: 26, max: 35 }
+                text: Unaware
+              - roll: { min: 36, max: 50 }
+                text: Ambivalent
+              - roll: { min: 51, max: 65 }
+                text: Wary
+              - roll: { min: 66, max: 75 }
+                text: Demanding
+              - roll: { min: 76, max: 85 }
+                text: Territorial
+              - roll: { min: 86, max: 95 }
+                text: Aggressive
+              - roll: { min: 96, max: 100 }
+                text: Ferocious
+          form:
+            name: Elder Beast Form
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 10 }
+                text: Bear
+              - roll: { min: 11, max: 20 }
+                text: Boar
+              - roll: { min: 21, max: 30 }
+                text: Wolf
+              - roll: { min: 31, max: 40 }
+                text: Elk
+              - roll: { min: 41, max: 50 }
+                text: Hawk
+              - roll: { min: 51, max: 60 }
+                text: Mammoth
+              - roll: { min: 61, max: 65 }
+                text: Muskox
+              - roll: { min: 66, max: 70 }
+                text: Raven
+              - roll: { min: 71, max: 75 }
+                text: Cave lion
+              - roll: { min: 76, max: 80 }
+                text: Owl
+              - roll: { min: 81, max: 85 }
+                text: Fox
+              - roll: { min: 86, max: 90 }
+                text: Eagle
+              - roll: { min: 91, max: 93 }
+                text: Saber cat
+              - roll: { min: 94, max: 96 }
+                text: Moose
+              - roll: { min: 97, max: 98 }
+                text: Snake
+              - roll: { min: 99, max: 100 }
+                text: Spider
+          lair:
+            name: Elder Beast Lair
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 10 }
+                text: Deep cave
+              - roll: { min: 11, max: 20 }
+                text: Dense wood
+              - roll: { min: 21, max: 30 }
+                text: Forsaken ruin
+              - roll: { min: 31, max: 40 }
+                text: Misty wetland
+              - roll: { min: 41, max: 50 }
+                text: Sacred grove
+              - roll: { min: 51, max: 60 }
+                text: Deep waterway
+              - roll: { min: 61, max: 70 }
+                text: Highland overlook
+              - roll: { min: 71, max: 80 }
+                text: Empty settlement
+              - roll: { min: 81, max: 90 }
+                text: In a community
+              - roll: { min: 91, max: 100 }
+                text: Between worlds
+          cohort:
+            name: Elder Beast Cohort
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 55 }
+                text: '**Solitary**: Stands alone'
+              - roll: { min: 56, max: 70 }
+                text: '**Pair**: With a mate'
+              - roll: { min: 71, max: 80 }
+                text: '**Menagerie**: Surrounded by many lesser creatures'
+              - roll: { min: 81, max: 90 }
+                text: '**Procession**: Attended by guardians or devotees'
+              - roll: { min: 91, max: 95 }
+                text: '**Brood**: Tending to its young'
+              - roll: { min: 96, max: 100 }
+                text: '**Pack**: Among several of its kind'
+          features:
+            name: Elder Beast Features
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 5 }
+                text: Bloody maw
+              - roll: { min: 6, max: 10 }
+                text: Heavily scarred
+              - roll: { min: 11, max: 15 }
+                text: Runemarked
+              - roll: { min: 16, max: 20 }
+                text: Wounded
+              - roll: { min: 21, max: 25 }
+                text: Camouflaged
+              - roll: { min: 26, max: 30 }
+                text: Aged
+              - roll: { min: 31, max: 35 }
+                text: Sickly
+              - roll: { min: 36, max: 40 }
+                text: Mossy mantle
+              - roll: { min: 41, max: 45 }
+                text: Adorned with trinkets
+              - roll: { min: 46, max: 50 }
+                text: Gift of speech
+              - roll: { min: 51, max: 55 }
+                text: Extra appendages
+              - roll: { min: 56, max: 60 }
+                text: Extra eyes
+              - roll: { min: 61, max: 65 }
+                text: Spikes or spines
+              - roll: { min: 66, max: 70 }
+                text: Luminous form
+              - roll: { min: 71, max: 75 }
+                text: Bound in broken chains
+              - roll: { min: 76, max: 80 }
+                text: Foul-smelling
+              - roll: { min: 81, max: 85 }
+                text: Home to roosting birds
+              - roll: { min: 86, max: 89 }
+                text: Barded in armor
+              - roll: { min: 90, max: 93 }
+                text: Fungal growths
+              - roll: { min: 94, max: 97 }
+                text: Hybrid form
+              - roll: { min: 98, max: 100 }
+                text: Undead
+          need:
+            name: Elder Beast Need
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 5 }
+                text: Protect its territory
+              - roll: { min: 6, max: 10 }
+                text: Gather or hunt for food
+              - roll: { min: 11, max: 15 }
+                text: Find a new lair
+              - roll: { min: 16, max: 20 }
+                text: Seek a mate
+              - roll: { min: 21, max: 25 }
+                text: Challenge a rival beast
+              - roll: { min: 26, max: 30 }
+                text: Drive away trespassers
+              - roll: { min: 31, max: 35 }
+                text: Return to a distant home
+              - roll: { min: 36, max: 40 }
+                text: Avenge a slain kin
+              - roll: { min: 41, max: 45 }
+                text: Restore a blighted land
+              - roll: { min: 46, max: 50 }
+                text: Recover a lost or stolen offspring
+              - roll: { min: 51, max: 55 }
+                text: Escape hunters or pursuers
+              - roll: { min: 56, max: 60 }
+                text: Avenge a despoiled land
+              - roll: { min: 61, max: 65 }
+                text: Protect a community or people
+              - roll: { min: 66, max: 70 }
+                text: Regain former strength
+              - roll: { min: 71, max: 75 }
+                text: Guard an ancient relic
+              - roll: { min: 76, max: 80 }
+                text: Relentlessly track its quarry
+              - roll: { min: 81, max: 85 }
+                text: Protect a sacred site
+              - roll: { min: 86, max: 90 }
+                text: Wander without rest
+              - roll: { min: 91, max: 95 }
+                text: Reach a place of power
+              - roll: { min: 96, max: 100 }
+                text: Escape a curse or obligation
+          tactics:
+            name: Elder Beast Tactics
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 6 }
+                text: Charge headlong
+              - roll: { min: 7, max: 12 }
+                text: Circle for an opening
+              - roll: { min: 13, max: 18 }
+                text: Strike and withdraw
+              - roll: { min: 19, max: 24 }
+                text: Trample or crush
+              - roll: { min: 25, max: 30 }
+                text: Savage bite or claw
+              - roll: { min: 31, max: 36 }
+                text: Grapple or pin
+              - roll: { min: 37, max: 42 }
+                text: Seize and throw
+              - roll: { min: 43, max: 48 }
+                text: Use terrain to its advantage
+              - roll: { min: 49, max: 54 }
+                text: Corner or isolate its prey
+              - roll: { min: 55, max: 60 }
+                text: Fill the air with a harrowing cry
+              - roll: { min: 61, max: 65 }
+                text: Pause and study
+              - roll: { min: 66, max: 70 }
+                text: Fix with a dreadful gaze
+              - roll: { min: 71, max: 75 }
+                text: Lure into a trap
+              - roll: { min: 76, max: 80 }
+                text: Use cover or concealment
+              - roll: { min: 81, max: 85 }
+                text: Shrug off mortal wounds
+              - roll: { min: 86, max: 90 }
+                text: Summon other creatures or beings
+              - roll: { min: 91, max: 95 }
+                text: Destroy or transform the environment
+              - roll: { min: 96, max: 100 }
+                text: Regenerate damaged flesh
       undying:
         name: Undying
         type: oracle_collection

@@ -30,6 +30,7 @@ Containing very basic implementation of core procedures and items
     - Interact
     - Journey
   - Encounter Codex
+    - Elder Beast (thanks [@hekau-chasut](https://github.com/hekau-chasut))
     - Undying
   - preliminary Action+Theme
 

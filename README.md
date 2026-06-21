@@ -25,9 +25,12 @@ Containing very basic implementation of core procedures and items
   - **Impacts are added as assets**, so Health, Spirit, and Supply all have their own asset card that needs to be added to the character. Note that they're reversed, so you take on a meter to add an impact and suffer on a meter to clear it. Not great, but that's how it is.
   - Resources are also added assets. There's 4 inidividual resources, as you cannot add the same asset twice in Iron Vault. If four won't be enough, go break some of them ;)
 - Oracles
-  - Journey
-  - Fight
-  - Undying Encounters
+  - Action Codex
+    - Fight
+    - Interact
+    - Journey
+  - Encounter Codex
+    - Undying
   - preliminary Action+Theme
 
 No mechanics for advantages / misfortunes, my suggestion is to use out-of-character comments for that.

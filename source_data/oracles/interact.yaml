@@ -1,0 +1,610 @@
+_id: legacies
+datasworn_version: "0.1.0"
+type: expansion
+ruleset: classic
+oracles:
+  interact:
+    _source:
+      <<: &Source
+        title: 'Ironsworn: Legacies - Playtest 1B'
+        authors:
+          - name: Shawn Tomkin
+        license: null
+        url: https://ironswornrpg.com
+        date: 2026-06-20
+    name: Interact Codex
+    type: oracle_collection
+    oracle_type: tables
+    contents:
+      mood:
+        name: Interact Mood
+        type: oracle_rollable
+        oracle_type: table_text
+        _source:
+          <<: *Source
+        summary: When you begin a new interaction or revisit a known character, use the table below to inspire the apparent mood of the scene. Use these prompts when you are unsure of the tone of an interaction, or if you want to represent how the mood shifts during an interaction.
+        rows:
+          - roll: { min: 1, max: 2 }
+            text: Celebratory
+          - roll: { min: 3, max: 4 }
+            text: Welcoming
+          - roll: { min: 5, max: 6 }
+            text: Supportive
+          - roll: { min: 7, max: 8 }
+            text: Appreciative
+          - roll: { min: 9, max: 10 }
+            text: Warm
+          - roll: { min: 11, max: 12 }
+            text: Playful
+          - roll: { min: 13, max: 14 }
+            text: Upbeat
+          - roll: { min: 15, max: 16 }
+            text: Optimistic
+          - roll: { min: 17, max: 18 }
+            text: Lighthearted
+          - roll: { min: 19, max: 20 }
+            text: Spirited
+          - roll: { min: 21, max: 22 }
+            text: Boisterous
+          - roll: { min: 23, max: 24 }
+            text: Relaxed
+          - roll: { min: 25, max: 26 }
+            text: Curious
+          - roll: { min: 27, max: 28 }
+            text: Candid
+          - roll: { min: 29, max: 30 }
+            text: Respectful
+          - roll: { min: 31, max: 32 }
+            text: Dignified
+          - roll: { min: 33, max: 34 }
+            text: Calm
+          - roll: { min: 35, max: 36 }
+            text: Reflective
+          - roll: { min: 37, max: 38 }
+            text: Determined
+          - roll: { min: 39, max: 40 }
+            text: Devout
+          - roll: { min: 41, max: 42 }
+            text: Formal
+          - roll: { min: 43, max: 44 }
+            text: Careful
+          - roll: { min: 45, max: 46 }
+            text: Cautious
+          - roll: { min: 47, max: 48 }
+            text: Concerned
+          - roll: { min: 49, max: 50 }
+            text: Skeptical
+          - roll: { min: 51, max: 52 }
+            text: Guarded
+          - roll: { min: 53, max: 54 }
+            text: Ambivalent
+          - roll: { min: 55, max: 56 }
+            text: Rushed
+          - roll: { min: 57, max: 58 }
+            text: Urgent
+          - roll: { min: 59, max: 60 }
+            text: Gossipy
+          - roll: { min: 61, max: 62 }
+            text: Evasive
+          - roll: { min: 63, max: 64 }
+            text: Standoffish
+          - roll: { min: 65, max: 66 }
+            text: Defiant
+          - roll: { min: 67, max: 68 }
+            text: Strained
+          - roll: { min: 69, max: 70 }
+            text: Overbearing
+          - roll: { min: 71, max: 72 }
+            text: Dismissive
+          - roll: { min: 73, max: 74 }
+            text: Cold
+          - roll: { min: 75, max: 76 }
+            text: Demanding
+          - roll: { min: 77, max: 78 }
+            text: Manipulative
+          - roll: { min: 79, max: 80 }
+            text: Tense
+          - roll: { min: 81, max: 82 }
+            text: Somber
+          - roll: { min: 83, max: 84 }
+            text: Brooding
+          - roll: { min: 85, max: 86 }
+            text: Grim
+          - roll: { min: 87, max: 88 }
+            text: Bitter
+          - roll: { min: 89, max: 90 }
+            text: Desperate
+          - roll: { min: 91, max: 92 }
+            text: Hostile
+          - roll: { min: 93, max: 94 }
+            text: Menacing
+          - roll: { min: 95, max: 96 }
+            text: Disquieting
+          - roll: { min: 97, max: 98 }
+            text: Haunting
+          - roll: { min: 99, max: 100 }
+            text: Uncanny
+      moments:
+        name: Interact Moments
+        type: oracle_rollable
+        oracle_type: table_text
+        _source:
+          <<: *Source
+        summary: To add minor details or introspective moments, ask and answer questions about the interaction from your character’s perspective. For inspiration, use the table below.
+        rows:
+          - roll: { min: 1, max: 10 }
+            text: What minor distraction draws your attention?
+          - roll: { min: 11, max: 20 }
+            text: What subtle cue contradicts their words?
+          - roll: { min: 21, max: 30 }
+            text: What aspect hints at their past?
+          - roll: { min: 31, max: 40 }
+            text: What causes the mood to shift?
+          - roll: { min: 41, max: 50 }
+            text: What small detail catches your eye?
+          - roll: { min: 51, max: 60 }
+            text: What unexpected connection reveals itself?
+          - roll: { min: 61, max: 70 }
+            text: What memory does this interaction evoke?
+          - roll: { min: 71, max: 80 }
+            text: What uncomfortable truth remains unspoken?
+          - roll: { min: 81, max: 90 }
+            text: What bold question are you tempted to ask?
+          - roll: { min: 91, max: 100 }
+            text: What tradition influences this interaction?
+      method:
+        name: Interact Method
+        type: oracle_rollable
+        oracle_type: table_text
+        dice: 1d200
+        _source:
+          <<: *Source
+        summary: Use this table along with the [Interact Topic](datasworn:oracle_rollable:legacies/interact/topic) table to spark the focus of a conversation or how another character responds. Roll once for method and again for topic, choosing the most interesting options from those provided. Or just roll once and pick from that row. Combine the results into a two-word prompt and interpret its meaning.
+        rows:
+          - roll: { min: 1, max: 5 }
+            text: Accuse
+          - roll: { min: 6, max: 10 }
+            text: Teach
+          - roll: { min: 11, max: 15 }
+            text: Explain
+          - roll: { min: 16, max: 20 }
+            text: Apologize
+          - roll: { min: 21, max: 25 }
+            text: Refuse
+          - roll: { min: 26, max: 30 }
+            text: Advise
+          - roll: { min: 31, max: 35 }
+            text: Reveal
+          - roll: { min: 36, max: 40 }
+            text: Plead
+          - roll: { min: 41, max: 45 }
+            text: Praise
+          - roll: { min: 46, max: 50 }
+            text: Boast
+          - roll: { min: 51, max: 55 }
+            text: Speculate
+          - roll: { min: 56, max: 60 }
+            text: Hire
+          - roll: { min: 61, max: 65 }
+            text: Challenge
+          - roll: { min: 66, max: 70 }
+            text: Reassure
+          - roll: { min: 71, max: 75 }
+            text: Foretell
+          - roll: { min: 76, max: 80 }
+            text: Confess
+          - roll: { min: 81, max: 85 }
+            text: Propose
+          - roll: { min: 86, max: 90 }
+            text: Conceal
+          - roll: { min: 91, max: 95 }
+            text: Demand
+          - roll: { min: 96, max: 100 }
+            text: Blame
+          - roll: { min: 101, max: 105 }
+            text: Persuade
+          - roll: { min: 106, max: 110 }
+            text: Encourage
+          - roll: { min: 111, max: 115 }
+            text: Celebrate
+          - roll: { min: 116, max: 120 }
+            text: Mock
+          - roll: { min: 121, max: 125 }
+            text: Offer
+          - roll: { min: 126, max: 130 }
+            text: DenyJ
+          - roll: { min: 131, max: 135 }
+            text: Pressure
+          - roll: { min: 136, max: 140 }
+            text: Threaten
+          - roll: { min: 141, max: 145 }
+            text: Mourn
+          - roll: { min: 146, max: 150 }
+            text: Promise
+          - roll: { min: 151, max: 155 }
+            text: Bargain
+          - roll: { min: 156, max: 160 }
+            text: Condemn
+          - roll: { min: 161, max: 165 }
+            text: Manipulate
+          - roll: { min: 166, max: 170 }
+            text: Warn
+          - roll: { min: 171, max: 175 }
+            text: Defend
+          - roll: { min: 176, max: 180 }
+            text: Doubt
+          - roll: { min: 181, max: 185 }
+            text: Mislead
+          - roll: { min: 186, max: 190 }
+            text: Question
+          - roll: { min: 191, max: 195 }
+            text: Provoke
+          - roll: { min: 196, max: 200 }
+            text: Ask
+      topic:
+        name: Interact Topic
+        type: oracle_rollable
+        oracle_type: table_text
+        dice: 1d200
+        _source:
+          <<: *Source
+        summary: Use this table along with the [Interact Method](datasworn:oracle_rollable:legacies/interact/method) table to spark the focus of a conversation or how another character responds. Roll once for method and again for topic, choosing the most interesting options from those provided. Or just roll once and pick from that row. Combine the results into a two-word prompt and interpret its meaning.
+        rows:
+          - roll: { min: 1, max: 5 }
+            text: Family
+          - roll: { min: 6, max: 10 }
+            text: Mystery
+          - roll: { min: 11, max: 15 }
+            text: Fear
+          - roll: { min: 16, max: 20 }
+            text: Secret
+          - roll: { min: 21, max: 25 }
+            text: Duty
+          - roll: { min: 26, max: 30 }
+            text: Shelter
+          - roll: { min: 31, max: 35 }
+            text: Loyalty
+          - roll: { min: 36, max: 40 }
+            text: Friend
+          - roll: { min: 41, max: 45 }
+            text: Craft
+          - roll: { min: 46, max: 50 }
+            text: History
+          - roll: { min: 51, max: 55 }
+            text: Journey
+          - roll: { min: 56, max: 60 }
+            text: Enemy
+          - roll: { min: 61, max: 65 }
+            text: Resource
+          - roll: { min: 66, max: 70 }
+            text: Reputation
+          - roll: { min: 71, max: 75 }
+            text: Memory
+          - roll: { min: 76, max: 80 }
+            text: Debt
+          - roll: { min: 81, max: 85 }
+            text: Partner
+          - roll: { min: 86, max: 90 }
+            text: Tradition
+          - roll: { min: 91, max: 95 }
+            text: Death
+          - roll: { min: 96, max: 100 }
+            text: Stranger
+          - roll: { min: 101, max: 105 }
+            text: Lie
+          - roll: { min: 106, max: 110 }
+            text: Work
+          - roll: { min: 111, max: 115 }
+            text: Quest
+          - roll: { min: 116, max: 120 }
+            text: Truth
+          - roll: { min: 121, max: 125 }
+            text: Wealth
+          - roll: { min: 126, max: 130 }
+            text: Justice
+          - roll: { min: 131, max: 135 }
+            text: Wealth
+          - roll: { min: 136, max: 140 }
+            text: Home
+          - roll: { min: 141, max: 145 }
+            text: Belongings
+          - roll: { min: 146, max: 150 }
+            text: Weapon
+          - roll: { min: 151, max: 155 }
+            text: Leader
+          - roll: { min: 156, max: 160 }
+            text: Faith
+          - roll: { min: 161, max: 165 }
+            text: Hope
+          - roll: { min: 166, max: 170 }
+            text: Rumor
+          - roll: { min: 171, max: 175 }
+            text: Power
+          - roll: { min: 176, max: 180 }
+            text: Conflict
+          - roll: { min: 181, max: 185 }
+            text: Community
+          - roll: { min: 186, max: 190 }
+            text: Legend
+          - roll: { min: 191, max: 195 }
+            text: Faction
+          - roll: { min: 196, max: 200 }
+            text: Vow
+      broken_bonds:
+        name: Broken Bonds
+        type: oracle_rollable
+        oracle_type: table_text
+        _source:
+          <<: *Source
+        summary: Use this table if you are inspired or prompted to introduce a harrowing event that targets or breaks a bond.
+        rows:
+          - roll: { min: 1, max: 10 }
+            text: Gone missing
+          - roll: { min: 11, max: 20 }
+            text: Targeted by an enemy
+          - roll: { min: 21, max: 30 }
+            text: Divided by conflicting ideologies
+          - roll: { min: 31, max: 40 }
+            text: Driven into exile
+          - roll: { min: 41, max: 50 }
+            text: Banished or imprisoned
+          - roll: { min: 51, max: 60 }
+            text: Lost to despair
+          - roll: { min: 61, max: 70 }
+            text: Sided with an enemy
+          - roll: { min: 71, max: 80 }
+            text: Caught up in conflict or disaster
+          - roll: { min: 81, max: 90 }
+            text: Felled by sickness or deprivation
+          - roll: { min: 91, max: 100 }
+            text: Lured by corruptive power
+    collections:
+      advantages:
+        name: Interact Advantages
+        type: oracle_collection
+        oracle_type: tables
+        _source:
+          <<: *Source
+        contents:
+          gain_momentum:
+            name: Gain Momentum
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 20 }
+                text: Favorable impression
+              - roll: { min: 21, max: 40 }
+                text: Reputation precedes you
+              - roll: { min: 41, max: 60 }
+                text: Encouraging response
+              - roll: { min: 61, max: 75 }
+                text: Mood improves
+              - roll: { min: 76, max: 90 }
+                text: Helpful distraction
+              - roll: { min: 91, max: 100 }
+                text: Gain a concession
+          find_an_opportunity:
+            name: Find an Opportunity
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Subtle emotional cues
+              - roll: { min: 16, max: 30 }
+                text: Useful detail
+              - roll: { min: 31, max: 45 }
+                text: See through a lie
+              - roll: { min: 46, max: 55 }
+                text: Helpful recollection
+              - roll: { min: 56, max: 65 }
+                text: Cultural insight
+              - roll: { min: 66, max: 75 }
+                text: Others lend support
+              - roll: { min: 76, max: 85 }
+                text: Shared understanding
+              - roll: { min: 86, max: 90 }
+                text: Common purpose
+              - roll: { min: 91, max: 95 }
+                text: Unexpected goodwill
+              - roll: { min: 96, max: 100 }
+                text: Surprising connection
+          make_a_discovery:
+            name: Make a Discovery
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Crucial clue
+              - roll: { min: 16, max: 30 }
+                text: Intriguing rumor
+              - roll: { min: 31, max: 45 }
+                text: Worthy cause
+              - roll: { min: 46, max: 55 }
+                text: Consequential news
+              - roll: { min: 56, max: 65 }
+                text: Influential advocate
+              - roll: { min: 66, max: 75 }
+                text: Rewarding offer
+              - roll: { min: 76, max: 85 }
+                text: Advance warning
+              - roll: { min: 86, max: 90 }
+                text: Potential patron
+              - roll: { min: 91, max: 95 }
+                text: Unmasked identity
+              - roll: { min: 96, max: 100 }
+                text: Prophetic revelation
+      misfortunes:
+        name: Interact Misfortunes
+        type: oracle_collection
+        oracle_type: tables
+        _source:
+          <<: *Source
+        contents:
+          spirit_impact:
+            name: Spirit Impact
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Failure to connect
+              - roll: { min: 16, max: 30 }
+                text: Insulted or slighted
+              - roll: { min: 31, max: 45 }
+                text: Shaken confidence
+              - roll: { min: 46, max: 55 }
+                text: Hurtful words
+              - roll: { min: 56, max: 65 }
+                text: Rising anger
+              - roll: { min: 66, max: 75 }
+                text: Unsettling truth
+              - roll: { min: 76, max: 85 }
+                text: Painful memory
+              - roll: { min: 86, max: 90 }
+                text: Moral dilemma
+              - roll: { min: 91, max: 95 }
+                text: Worldview challenged
+              - roll: { min: 96, max: 100 }
+                text: Disturbing vision
+          lose_momentum:
+            name: Lose Momentum
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Wasted time
+              - roll: { min: 16, max: 30 }
+                text: Bad first impression
+              - roll: { min: 31, max: 45 }
+                text: Mood shifts for the worse
+              - roll: { min: 46, max: 55 }
+                text: Awkward moment
+              - roll: { min: 56, max: 65 }
+                text: Change of subject
+              - roll: { min: 66, max: 75 }
+                text: Minor misstep
+              - roll: { min: 76, max: 85 }
+                text: Misread the situation
+              - roll: { min: 86, max: 90 }
+                text: Caught off guard
+              - roll: { min: 91, max: 95 }
+                text: Stumble over your words
+              - roll: { min: 96, max: 100 }
+                text: Unhelpful distraction
+          face_a_setback:
+            name: Face a Setback
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Stubborn refusal
+              - roll: { min: 16, max: 30 }
+                text: Strong counterargument
+              - roll: { min: 31, max: 45 }
+                text: Evasive response
+              - roll: { min: 46, max: 55 }
+                text: Language or cultural barrier
+              - roll: { min: 56, max: 65 }
+                text: Costly demand
+              - roll: { min: 66, max: 75 }
+                text: Forced to concede a point
+              - roll: { min: 76, max: 85 }
+                text: Emotions boil over
+              - roll: { min: 86, max: 90 }
+                text: Damning accusation
+              - roll: { min: 91, max: 95 }
+                text: Thorny misunderstanding
+              - roll: { min: 96, max: 100 }
+                text: Conflicting obligations
+          increase_tension:
+            name: Increase Tension
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Time running short
+              - roll: { min: 16, max: 30 }
+                text: Tempers begin to flare
+              - roll: { min: 31, max: 45 }
+                text: Worsening mood
+              - roll: { min: 46, max: 55 }
+                text: Patience wears thin
+              - roll: { min: 56, max: 65 }
+                text: Enemies draw near
+              - roll: { min: 66, max: 75 }
+                text: Unwanted attention
+              - roll: { min: 76, max: 85 }
+                text: Suspicion grows
+              - roll: { min: 86, max: 90 }
+                text: External trouble brews
+              - roll: { min: 91, max: 95 }
+                text: Looming ultimatum
+              - roll: { min: 96, max: 100 }
+                text: Unnatural forces stir
+          encounter_a_peril:
+            name: Encounter a Peril
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Dangerous interruption
+              - roll: { min: 16, max: 30 }
+                text: Tense debate begins
+              - roll: { min: 31, max: 45 }
+                text: Sent on an errand
+              - roll: { min: 46, max: 55 }
+                text: Sudden ambush
+              - roll: { min: 56, max: 65 }
+                text: Escalates to violence
+              - roll: { min: 66, max: 75 }
+                text: Someone else endangered
+              - roll: { min: 76, max: 85 }
+                text: Negotiations fall apart
+              - roll: { min: 86, max: 90 }
+                text: Lured into a trap
+              - roll: { min: 91, max: 95 }
+                text: Identity exposed
+              - roll: { min: 96, max: 100 }
+                text: Challenged to a duel
+          trigger_a_crisis:
+            name: Trigger a Crisis
+            type: oracle_rollable
+            oracle_type: table_text
+            _source:
+              <<: *Source
+            rows:
+              - roll: { min: 1, max: 15 }
+                text: Distressing news delivered
+              - roll: { min: 16, max: 30 }
+                text: Given an urgent undertaking
+              - roll: { min: 31, max: 45 }
+                text: Loyalty tested
+              - roll: { min: 46, max: 55 }
+                text: Bitter betrayal
+              - roll: { min: 56, max: 65 }
+                text: Relationship fractured
+              - roll: { min: 66, max: 75 }
+                text: Lasting feud begins
+              - roll: { min: 76, max: 85 }
+                text: Reputation ruined
+              - roll: { min: 86, max: 90 }
+                text: Bound to a dreadful bargain
+              - roll: { min: 91, max: 95 }
+                text: Traitorous connection
+              - roll: { min: 96, max: 100 }
+                text: Ominous prophecy spoken

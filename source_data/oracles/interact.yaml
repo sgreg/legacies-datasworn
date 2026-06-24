@@ -11,7 +11,7 @@ oracles:
           - name: Shawn Tomkin
         license: null
         url: https://ironswornrpg.com
-        date: 2026-06-20
+        date: 2026-06-22
     name: Interact Codex
     type: oracle_collection
     oracle_type: tables
@@ -299,7 +299,7 @@ oracles:
           - roll: { min: 116, max: 120 }
             text: Truth
           - roll: { min: 121, max: 125 }
-            text: Wealth
+            text: Safety
           - roll: { min: 126, max: 130 }
             text: Justice
           - roll: { min: 131, max: 135 }
@@ -347,7 +347,7 @@ oracles:
           - roll: { min: 31, max: 40 }
             text: Driven into exile
           - roll: { min: 41, max: 50 }
-            text: Banished or imprisoned
+            text: Captured or imprisoned
           - roll: { min: 51, max: 60 }
             text: Lost to despair
           - roll: { min: 61, max: 70 }

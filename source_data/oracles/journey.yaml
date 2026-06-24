@@ -11,7 +11,7 @@ oracles:
           - name: Shawn Tomkin
         license: null
         url: https://ironswornrpg.com
-        date: 2026-06-20
+        date: 2026-06-22
     name: Journey Codex
     type: oracle_collection
     oracle_type: tables
@@ -51,7 +51,7 @@ oracles:
           - roll: { min: 61, max: 65 }
             text: Broken or blocked path forces a detour
           - roll: { min: 66, max: 70 }
-            text: Raiders prey upon travelers
+            text: Reavers prey upon travelers
           - roll: { min: 71, max: 75 }
             text: Guardians protect sacred ground
           - roll: { min: 76, max: 80 }

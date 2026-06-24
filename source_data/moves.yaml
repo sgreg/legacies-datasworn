@@ -258,7 +258,7 @@ moves:
 
           On a __strong hit__, you complete the challenge.
             * Take +1 advantage.
-            * If position is favored, take +1 advantage and gain +1 momentum.
+            * If position is favored, take +1 advantage and gain momentum.
             * Gain position, if not already favored.
 
           On a __weak hit__, you complete the challenge at a cost.
@@ -269,7 +269,7 @@ moves:
           On a __miss__, the challenge fails.
             * Take +2 misfortune.
             * If position is pressured, take +1 misfortune.
-            * If position is desperate, take +2 misfortune and lose -1 momentum.
+            * If position is desperate, take +2 misfortune and lose momentum.
             * Lose position, if not already desperate.
 
           Earn boons for a completed challenge as follows. If you abandoned or failed the challenge, take no reward.
@@ -281,7 +281,7 @@ moves:
             text: |-
               On a __strong hit__, you complete the challenge.
                 * Take +1 advantage.
-                * If position is favored, take +1 advantage and gain +1 momentum.
+                * If position is favored, take +1 advantage and gain momentum.
                 * Gain position, if not already favored.
                 * Earn boons for a completed challenge as follows. If you abandoned or failed the challenge, take no reward.
                   * Base reward: 1 boon
@@ -302,7 +302,7 @@ moves:
               On a __miss__, the challenge fails.
                 * Take +2 misfortune.
                 * If position is pressured, take +1 misfortune.
-                * If position is desperate, take +2 misfortune and lose -1 momentum.
+                * If position is desperate, take +2 misfortune and lose momentum.
                 * Lose position, if not already desperate.
   pass_time:
     name: Pass Time

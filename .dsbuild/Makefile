@@ -1,5 +1,7 @@
 DATASWORN_ID = legacies
-OUTFILE=$(DATASWORN_ID)-$(shell /bin/date +%Y%m%d-%H%M%S).json
+VERSION ?= $(shell /bin/date +%Y%m%d-%H%M%S)
+OUTDIR ?= dist
+OUTFILE = $(OUTDIR)/$(DATASWORN_ID)-datasworn-$(VERSION).json
 
 all: get
 
@@ -9,6 +11,7 @@ sanity:
 		echo "";\
 		exit 1;\
 	fi
+	@mkdir -p ${OUTDIR}
 
 build: sanity
 	docker rm -i dsbuilder

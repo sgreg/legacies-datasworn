@@ -1,0 +1,5 @@
+dist/
+.idea/
+tools/*.txt
+tools/*.yaml
+*.json

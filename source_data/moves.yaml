@@ -304,6 +304,39 @@ moves:
                 * If position is pressured, take +1 misfortune.
                 * If position is desperate, take +2 misfortune and lose momentum.
                 * Lose position, if not already desperate.
+  spend_boons:
+    name: Spend boons
+    type: move_category
+    _source:
+      <<: *Source
+    summary: |-
+      Spend Boons
+    contents:
+      spend_boons:
+        name: Spend Boons
+        type: move
+        roll_type: no_roll
+        trigger:
+          text: When you spend available boons...
+        _source:
+          <<: *Source
+        text: |-
+          You may __spend available boons__ to gain abilities, bolster your resources, recover from severe hardships, or contribute to advancements in the world.
+
+          Benefit | Cost
+          ---- | ----
+          Gain an asset with one marked ability | 8
+          Improve an asset by marking an ability | 5
+          Gain a resource with one marked quality | 4\*
+          Improve a resource by marking an extra quality | 3\*
+          Mend an impact on a resource (_resilient_ only) | 2\*
+          Mend a severe impact during [Pass Time](datasworn:move:legacies/pass_time/pass_time) | 2
+          Create or improve a passage | 3\*\*
+          Create or improve a bond | 4\*\*
+          Create or improve a haven | 5\*\*
+
+          \* if linked to a supportive bond, cost is 1 less
+          \*\* if playing with allies, cost is per ally
   pass_time:
     name: Pass Time
     type: move_category

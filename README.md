@@ -12,6 +12,7 @@ Containing very basic implementation of core procedures and items
   - Take Action, Gain Advantage, Suffer Misfortune
   - Undertake a Quest, Reach a Milestone, Resolve a Quest, Forsake a Quest
   - Take on a Challenge, Resolve a Challenge
+  - Spend Boons
   - Pass Time
   - Test Your Legacy, End Your Legacy
 - Condition meters added to the character sheet
